@@ -1,0 +1,30 @@
+body{
+    background: rgb(168,203,168);
+    background: linear-gradient(180deg, rgba(168,203,168,1) 35%, rgba(143,184,150,1) 80%, rgba(114,167,134,1) 100%);
+    min-height: 100vh;
+    text-align: center;
+}
+
+.login-box{
+    width: 40%;
+    min-width: 350px;
+    margin-top: 8%;
+    padding: 4%;
+    background-color: #d4fad798;
+    border: 2px solid #045736;
+}
+
+.login-box .btn-login{
+    background-color: #0a4d32;
+    width: 100%;
+    padding: 0;
+    height: 5vh;
+    color: #ffffff;
+}
+
+footer{
+    margin-top: auto;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
