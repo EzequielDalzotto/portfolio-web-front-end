@@ -1,0 +1,17 @@
+.experiencia__titulo-seccion{
+    margin-right: 15%;
+    font-size: 30px;
+}
+
+h2.experiencia-titulo{
+    font-size: 28px;
+}
+
+.ft-exp{
+    background-color: #1f1f1f8a;
+    filter: brightness(80%);
+}
+
+.ft-exp:hover{
+    transform: scale(1.05);
+}
