@@ -1,0 +1,52 @@
+.nav-container{
+    justify-content: left;
+}
+
+.list-group-item{
+    border: none;
+}
+
+.ap-logo{
+  width: 100px;
+  height: 55px;
+}
+
+.ap-logo:hover{
+    opacity: 50%;
+}
+
+.logo{
+    width: 40px;
+    height: 40px;
+}
+
+.logo:hover{
+    opacity: 50%;
+}
+
+.btn-login{
+    background-color: #ffffff;
+    color: #1e5631;
+    font-weight: 500;
+    margin-top: 2px;
+    border: none;
+    width: 74px;
+    padding: 9%;
+}
+
+.btn-login:hover{
+    background-color: #ffffff;
+    color: #1e5631;
+    opacity: 50%;
+    border: none;
+    box-shadow: none;
+}
+
+.btn-login:focus, .btn-login:active{
+    background-color: #ffffff;
+    color: #1e5631;
+    opacity: 50%;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
