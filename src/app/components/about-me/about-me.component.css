@@ -1,0 +1,23 @@
+/*Acerca de mi*/
+.about-me{
+    background: linear-gradient(rgba(0, 20, 2, 0.1),rgba(255, 255, 255, 0));
+}
+
+.about-me.grid{
+    margin-left: none;
+}
+
+.ft-perfil{
+    margin-top: -25px;
+    margin-left: none;
+    background-color: #1f1f1f8a;
+    border: #1e5631;
+}
+
+.about-me-titulo{
+    font-size: 30px;
+}
+
+.about-me-texto{
+    font-size: 15px;
+}
