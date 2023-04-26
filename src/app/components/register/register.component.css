@@ -1,4 +1,4 @@
-.login-box{
+.register-box{
     width: 40%;
     min-width: 350px;
     margin-top: 8%;
@@ -7,7 +7,7 @@
     border: 2px solid #045736;
 }
 
-.login-box .btn-login{
+.register-box .btn-register{
     background-color: #0a4d32;
     width: 100%;
     padding: 0;

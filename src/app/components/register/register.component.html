@@ -1,16 +1,16 @@
-<section class="login-box container-fluid text-start">
+<section class="register-box container-fluid text-start">
     <form>
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">Email</label>
           <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-          <div id="emailHelp" class="form-text">Nunca compartiremos tu informacion</div>
+          <div id="emailHelp" class="form-text">Correo electronico valido</div>
         </div>
         <div class="mb-3">
           <label for="exampleInputPassword1" class="form-label">Contraseña</label>
           <input type="password" class="form-control" id="exampleInputPassword1">
-          <div id="passwordHelp" class="form-text">No compartas tu contraseña</div>
+          <div id="passwordHelp" class="form-text">Entre 3 y 8 caracteres</div>
         </div>
-        <button type="submit" class="btn btn-primary btn-login">Login</button>
+        <button type="submit" class="btn btn-primary btn-register">Registrate</button>
     </form>
-    <small class="registro-txt">Si no tienes una cuenta <a [routerLink]="'/register'">Registrate</a></small>
+    <small class="registro-txt">Si ya tienes una cuenta <a [routerLink]="'/login'">Iniciar Sesion</a></small>
 </section>
