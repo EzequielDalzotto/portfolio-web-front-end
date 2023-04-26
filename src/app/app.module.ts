@@ -16,6 +16,13 @@ import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { Page404Component } from './components/page404/page404.component';
+import { AdminDashboardComponent } from './components/admin-dashboard/admin-dashboard.component';
+import { SocialMediaPanelComponent } from './components/dashboard-panels/social-media-panel/social-media-panel.component';
+import { BannerPanelComponent } from './components/dashboard-panels/banner-panel/banner-panel.component';
+import { AboutMePanelComponent } from './components/dashboard-panels/about-me-panel/about-me-panel.component';
+import { EducationPanelComponent } from './components/dashboard-panels/education-panel/education-panel.component';
+import { SkillsPanelComponent } from './components/dashboard-panels/skills-panel/skills-panel.component';
+import { ProjectsPanelComponent } from './components/dashboard-panels/projects-panel/projects-panel.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +39,14 @@ import { Page404Component } from './components/page404/page404.component';
     FooterComponent,
     LoginComponent,
     RegisterComponent,
-    Page404Component
+    Page404Component,
+    AdminDashboardComponent,
+    SocialMediaPanelComponent,
+    BannerPanelComponent,
+    AboutMePanelComponent,
+    EducationPanelComponent,
+    SkillsPanelComponent,
+    ProjectsPanelComponent
   ],
   imports: [
     BrowserModule,

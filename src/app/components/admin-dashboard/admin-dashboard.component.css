@@ -1,13 +1,36 @@
-.bg-custom{
-    background-color: #045736;
+
+.ft-perfil{
+    margin-top: 4px;
+    margin-left: none;
+    background-color: #1f1f1f8a;
+    border: #1e5631;
 }
 
-body {
-    background: rgb(168,203,168);
-    background: linear-gradient(180deg, rgba(168,203,168,1) 35%, rgba(143,184,150,1) 80%, rgba(114,167,134,1) 100%);
+/* Linea de grid */
+.col-9{
+    border-left: 2px solid #045736;
 }
 
-/* Buttons for Dashboard panels */
+/* List group */
+.adminDashboard .list-group-item{
+    background: #9cc29f;
+}
+
+.adminDashboard .list-group-item:hover{
+    background: #9cc29f;
+}
+
+.panel-logo{
+    width: 30px;
+    height: 30px;
+}
+
+/* Paneles */
+.tab-pane{
+    text-align: start;
+    padding-left: 2%;
+}
+
 .btn-guardar{
     background-color: #ffffff;
     color: #1e5631;
@@ -73,7 +96,7 @@ body {
     border: none;
 }
 
-/* !!!!!!!!!!!MEJORAR!!!!!!!!!! */
+/* Divs de Educacion-Skills-Proyectos */
 .grupo-info , .certificates-container, .educaciones-container, .softSkills-container , .hardSkills-container, .proyectos-container{
     border: 1px solid #1e5631;
     border-radius: 5px;

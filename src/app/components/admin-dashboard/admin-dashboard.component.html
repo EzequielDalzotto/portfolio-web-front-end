@@ -1,0 +1,70 @@
+<section class="adminDashboard">
+    <div class="container-fluid admin-grid m-0"> <!--Arreglar margin end-->
+        <div class="row">
+          <div class="col-3 text-center mb-2">
+            <!-- Informacion -->
+            <img src="../../../assets/perfil2.jpg" alt="foto de perfil" class="rounded-circle img-fluid img-thumbnail ft-perfil">
+            <h4>Ezequiel Dalzotto</h4>
+            <p>Estudiante</p>
+            <!-- List group --Lista de Paneles-- -->
+            <div class="list-group" id="myList" role="tablist">
+                <a class="list-group-item list-group-item-action active" data-bs-toggle="list" href="#redes" role="tab">
+                    <img src="../../../assets/icons8-social-64.png" alt="Redes" class="panel-logo">
+                    Redes Sociales
+                </a>
+                <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#banner" role="tab">
+                    <img src="../../../assets/icons8-picture-64.png" alt="Banner" class="panel-logo">
+                    Banner
+                </a>
+                <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#about-me" role="tab">
+                    <img src="../../../assets/icons8-about-me-50.png" alt="About me" class="panel-logo">
+                    Sobre Mi
+                </a>
+                <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#educacion" role="tab">
+                    <img src="../../../assets/icons8-student-center-50.png" alt="Educacion" class="panel-logo">
+                    Educacion
+                </a>
+                <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#skills" role="tab">
+                    <img src="../../../assets/icons8-skills-64.png" alt="Skills" class="panel-logo">
+                    Skills
+                </a>
+                <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#proyectos" role="tab">
+                    <img src="../../../assets/icons8-group-of-projects-50.png" alt="Proyectos" class="panel-logo">
+                    Proyectos
+                </a>
+            </div>
+          </div>
+          <div class="col-9 text-left m-0">
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <!-- Panel de Redes -->
+                <div class="tab-pane active" id="redes" role="tabpanel">
+                    <app-social-media-panel></app-social-media-panel>
+                </div>
+                <!-- Panel de Banner -->
+                <div class="tab-pane" id="banner" role="tabpanel">
+                    <app-banner-panel></app-banner-panel>
+                </div>
+                <!-- Panel About-Me -->
+                <div class="tab-pane" id="about-me" role="tabpanel">
+                    <app-about-me-panel></app-about-me-panel>
+                </div>
+
+                <!-- Panel Educacion -->
+                <div class="tab-pane" id="educacion" role="tabpanel">
+                    <app-education-panel></app-education-panel>
+                </div>
+                <!-- Panel de Skills -->
+                <div class="tab-pane" id="skills" role="tabpanel">
+                    <app-skills-panel></app-skills-panel>
+                </div>
+
+                <!-- Panel de Proyectos -->
+                <div class="tab-pane" id="proyectos" role="tabpanel">
+                    <app-projects-panel></app-projects-panel>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</section>
