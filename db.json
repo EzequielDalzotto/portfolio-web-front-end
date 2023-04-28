@@ -1,0 +1,116 @@
+{
+  "social-media":[
+    {
+        "id": 1,
+        "media": "Linkedin",
+        "url": "https://www.linkedin.com/in/ezequiel-dalzotto-a52bb7250/"
+    },
+    {
+        "id": 2,
+        "media": "Instagram",
+        "url": "https://www.instagram.com/EzequielDalzotto/"
+    },
+    {
+        "id": 3,
+        "media": "Github",
+        "url": "https://github.com/EzequielDalzotto"
+    }
+  ],
+  "educaciones": [
+    {
+      "id":1,
+      "tipo-educacion": "Secundario",
+      "periodo": "2014-2019",
+      "nombre": "Comercio 1",
+      "detalle": "Escuela secundaria Nro 16 Profesor Gerardo Victorin"
+    },
+    {
+      "id":2,
+      "tipo-educacion": "Inglés",
+      "periodo": "2013-2019",
+      "nombre": "Instituto E.L.A Inglés",
+      "detalle": "Con First Certificate in English evaluado por Cambridge Assessment"
+    },
+    {
+      "id":3,
+      "tipo-educacion": "Argentina Programa",
+      "periodo": "2021-2022",
+      "nombre": "#YoProgramo",
+      "detalle": "Primera etapa de Argentina Programa"
+    },
+    {
+      "id":4,
+      "tipo-educacion": "Universidad",
+      "periodo": "2021-Actualidad",
+      "nombre": "Facultad de Ciencias de la Administracion - UNER",
+      "detalle": "Actualmente en tercer año de Licenciatura en Sistemas"
+    }
+  ],
+  "soft-skills":[
+    {
+      "id": 1,
+      "skill-name":"Trabajo en Equipo",
+      "skill-porcentaje":"60"
+    },
+    {
+      "id": 2,
+      "skill-name":"Comunicacion",
+      "skill-porcentaje":"90"
+    },
+    {
+      "id": 3,
+      "skill-name":"Proactivo",
+      "skill-porcentaje":"88"
+    },
+    {
+      "id": 4,
+      "skill-name":"Resolucion de problemas",
+      "skill-porcentaje":"78"
+    },
+    {
+      "id": 5,
+      "skill-name":"Flexibilidad",
+      "skill-porcentaje":"97"
+    },
+    {
+      "id": 6,
+      "skill-name":"Autooorganizacion",
+      "skill-porcentaje":"58"
+    }
+  ],
+  "hard-skills":[
+    {
+      "id": 1,
+      "skill-name":"HTML",
+      "skill-porcentaje":"97"
+    },
+    {
+      "id": 2,
+      "skill-name":"CSS",
+      "skill-porcentaje":"85"
+    },
+    {
+      "id": 3,
+      "skill-name":"JS",
+      "skill-porcentaje":"80"
+    },
+    {
+      "id": 4,
+      "skill-name":"Typescript",
+      "skill-porcentaje":"76"
+    },
+    {
+      "id": 5,
+      "skill-name":"Angular",
+      "skill-porcentaje":"5"
+    },
+    {
+      "id": 6,
+      "skill-name":"SQL",
+      "skill-porcentaje":"2"
+    }
+  ]
+      
+    
+
+}
