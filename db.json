@@ -3,17 +3,20 @@
     {
         "id": 1,
         "media": "Linkedin",
-        "url": "https://www.linkedin.com/in/ezequiel-dalzotto-a52bb7250/"
+        "url": "https://www.linkedin.com/in/ezequiel-dalzotto-a52bb7250/",
+        "icon":"icons8-linkedin-circled-50.png"
     },
     {
         "id": 2,
         "media": "Instagram",
-        "url": "https://www.instagram.com/EzequielDalzotto/"
+        "url": "https://www.instagram.com/EzequielDalzotto/",
+        "icon":"instagram-icon.png"
     },
     {
         "id": 3,
         "media": "Github",
-        "url": "https://github.com/EzequielDalzotto"
+        "url": "https://github.com/EzequielDalzotto",
+        "icon": "icons8-github-60.png"
     }
   ],
   "educaciones": [
