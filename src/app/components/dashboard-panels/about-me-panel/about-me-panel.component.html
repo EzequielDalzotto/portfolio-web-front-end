@@ -6,12 +6,17 @@
     </div>
     <div class="my-3">
         <label for="tituloActual" class="form-label">Titulo</label>
-        <input type="text" class="form-control" id="tituloActual">
+        <input type="text" class="form-control" id="tituloActual" [placeholder]="about_me.titulo">
+        <button type="button" class="btn btn-primary btn-guardar">Actualizar</button>
+    </div>
+    <div class="my-3">
+        <label for="ubicacion" class="form-label">Ubicacion</label>
+        <input type="text" class="form-control" id="ubicacion" [placeholder]="about_me.ubicacion">
         <button type="button" class="btn btn-primary btn-guardar">Actualizar</button>
     </div>
     <div class="mb-3">
         <label for="descripcion" class="form-label">Descripcion</label>
-        <textarea class="form-control" id="descripcion" rows="3"></textarea>
+        <textarea class="form-control" id="descripcion" rows="3" [placeholder]="about_me.descripcion"></textarea>
         <button type="button" class="btn btn-primary btn-guardar">Guardar</button>
         <button type="button" class="btn btn-primary btn-eliminar ms-2">Eliminar</button>
     </div>

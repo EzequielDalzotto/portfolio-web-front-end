@@ -3,18 +3,14 @@
         <div class="container-fluid grid ms-0 m-0"> <!--Arreglar margin end-->
             <div class="row">
               <div class="col-3 text-center">
-                <img src="../../../assets/perfil2.jpg" alt="foto de perfil" class="rounded-circle img-fluid img-thumbnail ft-perfil">
+                <img src="../../../assets/{{about_me.ft_perfil}}" alt="foto de perfil" class="rounded-circle img-fluid img-thumbnail ft-perfil">
                 <h4>Ezequiel Dalzotto</h4>
-                <p>Estudiante</p>
-                <p>Entre Rios (Argentina)</p>
+                <p>{{about_me.titulo}}</p>
+                <p>{{about_me.ubicacion}}</p>
               </div>
               <div class="col-9 text-left mt-5">
                 <h2 class="about-me-titulo">Acerca de mi</h2>
-                <p class="about-me-texto">Soy un estudiante de sistemas en FCAL UNER que le apasiona la programación en general y
-                  con muchas ganas de aprender cada vez más sobre desarrollo web. Me encanta explorar 
-                  sobre nuevas tecnologías para entenderlas y poder adquirir nuevas herramientas por 
-                  curiosidad y para mejorar la calidad y optimización de mi código.
-                </p>
+                <p class="about-me-texto">{{about_me.descripcion}}</p>
               </div>
             </div>
           </div>
