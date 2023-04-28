@@ -3,39 +3,12 @@
       <h3 class="titulo-seccion proyectos__titulo-seccion text-center mt-4">Proyectos</h3>
       <!-- CARDS BOOTSTRAP -->
       <div class="row row-cols-1 row-cols-md-3 g-4 m-3">
-        <div class="col">
+        <div class="col" *ngFor="let project of projects">
           <div class="card h-100">
-            <img src="../../../assets/todoListImage.png" class="card-img-top" alt="...">
+            <img src="../../../assets/{{project.portada}}" class="card-img-top" alt="{{project.titulo}}">
             <div class="card-body">
-              <h5 class="card-title">To Do List</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <img src="../../../assets/calculator.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Calculadora</h5>
-              <p class="card-text">This is a short card.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <img src="../../../assets/sampleCompany.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Proyecto 3</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <img src="../../../assets/sampleCompany.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Proyecto 4</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <h5 class="card-title">{{project.titulo}}</h5>
+              <p class="card-text">{{project.descripcion}}</p>
             </div>
           </div>
         </div>
