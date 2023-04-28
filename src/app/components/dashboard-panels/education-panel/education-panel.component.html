@@ -3,64 +3,22 @@
     <div class=" my-3 educaciones-container">
         <h4 class="mt-3">Educaciones</h4>
 
-        <div class="my-3 educacion-1 grupo-info">
+        <div class="my-3 educacion-1 grupo-info" *ngFor="let education of educations">
             <div class="my-3">
                 <label for="tipoEducacion" class="form-label">Tipo de educacion</label>
-                <input type="text" class="form-control" id="tipoEducacion">
+                <input type="text" class="form-control" id="tipoEducacion" [placeholder]="education.tipo">
             </div>
             <div class="my-3 col-3">
                 <label for="años" class="form-label">Años</label>
-                <input type="text" class="form-control" id="años">
+                <input type="text" class="form-control" id="años" [placeholder]="education.periodo">
             </div>
             <div class="my-3">
                 <label for="lugar" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="lugar">
+                <input type="text" class="form-control" id="lugar" [placeholder]="education.nombre">
             </div>
             <div class="my-3">
                 <label for="descripcion-curso" class="form-label">Descripcion</label>
-                <textarea class="form-control" id="descripcion-curso" rows="2"></textarea>
-            </div>
-            <button type="button" class="btn btn-primary btn-guardar">Guardar</button>
-            <button type="button" class="btn btn-primary btn-eliminar ms-2">Eliminar</button>
-        </div>
-        
-        <div class="my-3 educacion-3 grupo-info">
-            <div class="my-3">
-                <label for="tipoEducacion" class="form-label">Tipo de educacion</label>
-                <input type="text" class="form-control" id="tipoEducacion">
-            </div>
-            <div class="my-3 col-3">
-                <label for="años" class="form-label">Años</label>
-                <input type="text" class="form-control" id="años">
-            </div>
-            <div class="my-3">
-                <label for="lugar" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="lugar">
-            </div>
-            <div class="my-3">
-                <label for="descripcion-curso" class="form-label">Descripcion</label>
-                <textarea class="form-control" id="descripcion-curso" rows="2"></textarea>
-            </div>
-            <button type="button" class="btn btn-primary btn-guardar">Guardar</button>
-            <button type="button" class="btn btn-primary btn-eliminar ms-2">Eliminar</button>
-        </div>
-        
-        <div class="my-3 educacion-4 grupo-info">
-            <div class="my-3">
-                <label for="tipoEducacion" class="form-label">Tipo de educacion</label>
-                <input type="text" class="form-control" id="tipoEducacion">
-            </div>
-            <div class="my-3 col-3">
-                <label for="años" class="form-label">Años</label>
-                <input type="text" class="form-control" id="años">
-            </div>
-            <div class="my-3">
-                <label for="lugar" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="lugar">
-            </div>
-            <div class="my-3">
-                <label for="descripcion-curso" class="form-label">Descripcion</label>
-                <textarea class="form-control" id="descripcion-curso" rows="2"></textarea>
+                <textarea class="form-control" id="descripcion-curso" rows="2" [placeholder]="education.detalle"></textarea>
             </div>
             <button type="button" class="btn btn-primary btn-guardar">Guardar</button>
             <button type="button" class="btn btn-primary btn-eliminar ms-2">Eliminar</button>
