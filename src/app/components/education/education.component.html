@@ -7,53 +7,15 @@
           <div class="col-7">
             <!--Grid de educaciones-->
             <div class="educacion__grid-educaciones container-fluid">
-              <!-- Secundario -->
-              <div class="row">
+              <div class="row" *ngFor="let educacion of educations">
                 <div class=" col-4 text-left mt-3">
-                  <h4 class="educacion-titulo">Secundario</h4>
-                  <h6 class="años-de-estudio">2014-2019</h6>
+                  <h4 class="educacion-titulo">{{educacion.tipo}}</h4>
+                  <h6 class="años-de-estudio">{{educacion.periodo}}</h6>
                 </div>
                 <div class="col-8 text-center mt-3">
-                  <h5>Comercio 1</h5>
+                  <h5>{{educacion.nombre}}</h5>
                   <p class="educacion-texto">
-                    Escuela secundaria Nro 16 Profesor Gerardo Victorin
-                  </p>
-                </div>
-              </div>
-              <!-- Ingles -->
-              <div class="row">
-                <div class=" col-4 text-left mt-3">
-                  <h4 class="educacion-titulo">Inglés</h4>
-                  <h6 class="años-de-estudio">2013-2019</h6>
-                </div>
-                <div class="col-8 text-center mt-3">
-                  <h5>Instituto E.L.A Inglés</h5>
-                  <p class="educacion-texto">
-                    Con First Certificate in English evaluado por Cambridge Assessment
-                  </p>
-                </div>
-              </div>
-              <div class="row">
-                <div class=" col-4 text-left mt-3">
-                  <h4 class="educacion-titulo">Argentina Programa</h4>
-                  <h6 class="años-de-estudio">2021-2022</h6>
-                </div>
-                <div class="col-8 text-center mt-3">
-                  <h5>#YoProgramo</h5>
-                  <p class="educacion-texto">
-                    Primera etapa de Argentina Programa
-                  </p>
-                </div>
-              </div>
-              <div class="row">
-                <div class=" col-4 text-left mt-3">
-                  <h4 class="educacion-titulo">Universidad</h4>
-                  <h6 class="años-de-estudio">2021-Actualidad</h6>
-                </div>
-                <div class="col-8 text-center mt-3">
-                  <h5>Facultad de Ciencias de la Administracion - UNER</h5>
-                  <p class="educacion-texto">
-                    Actualmente en tercer año de Licenciatura en Sistemas
+                    {{educacion.detalle}}
                   </p>
                 </div>
               </div>
