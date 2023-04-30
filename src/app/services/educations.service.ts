@@ -21,4 +21,13 @@ export class EducationsService {
   getEducations():Observable<Educacion[]>{
     return this.http.get<Educacion[]>(this.apiUrl)
   }
+
+  updateEducacion(educacion: Educacion):Observable<Educacion>{
+    const url = `${this.apiUrl}/${educacion.id}`
+    return this.http.put<Educacion>(url, educacion, httpOptions)
+  }
+
+  addEducacion(educacion: Educacion):Observable<Educacion>{
+    return this.http.post<Educacion>(this.apiUrl, educacion, httpOptions)
+  }
 }

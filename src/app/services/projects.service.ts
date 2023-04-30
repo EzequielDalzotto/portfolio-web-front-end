@@ -18,7 +18,16 @@ export class ProjectsService {
 
   constructor(private http:HttpClient) { }
 
-  getEducations():Observable<Project[]>{
+  getProjects():Observable<Project[]>{
     return this.http.get<Project[]>(this.apiUrl)
+  }
+
+  updateProject(project: Project):Observable<Project>{
+    const url = `${this.apiUrl}/${project.id}`
+    return this.http.put<Project>(url, project, httpOptions)
+  }
+
+  addProject(project: Project):Observable<Project>{
+    return this.http.post<Project>(this.apiUrl, project, httpOptions)
   }
 }

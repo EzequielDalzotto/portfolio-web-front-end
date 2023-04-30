@@ -13,7 +13,7 @@ export class ProjectsPanelComponent {
   constructor(private projectsService: ProjectsService) {  }
 
   ngOnInit(): void {
-    this.projectsService.getEducations().subscribe((projects)=>[
+    this.projectsService.getProjects().subscribe((projects)=>[
       this.projects = projects
     ])
   }

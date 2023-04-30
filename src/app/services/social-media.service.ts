@@ -21,4 +21,9 @@ export class SocialMediaService {
   getSocial():Observable<SocialMedia[]>{
     return this.http.get<SocialMedia[]>(this.apiUrl)
   }
+
+  updateSocial(socialMedia: SocialMedia):Observable<SocialMedia>{
+    const url = `${this.apiUrl}/${socialMedia.id}`
+    return this.http.put<SocialMedia>(url, socialMedia, httpOptions)
+  }
 }
