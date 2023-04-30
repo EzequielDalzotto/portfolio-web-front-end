@@ -97,7 +97,7 @@
 }
 
 /* Divs de Educacion-Skills-Proyectos */
-.grupo-info , .certificates-container, .educaciones-container, .softSkills-container , .hardSkills-container, .proyectos-container{
+.grupo-info , .certificates-container, .educaciones-container, .softSkills-container , .hardSkills-container, .proyectos-container , .experience-container{
     border: 1px solid #1e5631;
     border-radius: 5px;
     padding: 5px;

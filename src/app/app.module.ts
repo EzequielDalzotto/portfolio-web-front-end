@@ -24,6 +24,7 @@ import { AboutMePanelComponent } from './components/dashboard-panels/about-me-pa
 import { EducationPanelComponent } from './components/dashboard-panels/education-panel/education-panel.component';
 import { SkillsPanelComponent } from './components/dashboard-panels/skills-panel/skills-panel.component';
 import { ProjectsPanelComponent } from './components/dashboard-panels/projects-panel/projects-panel.component';
+import { ExperiencePanelComponent } from './components/dashboard-panels/experience-panel/experience-panel.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { ProjectsPanelComponent } from './components/dashboard-panels/projects-p
     AboutMePanelComponent,
     EducationPanelComponent,
     SkillsPanelComponent,
-    ProjectsPanelComponent
+    ProjectsPanelComponent,
+    ExperiencePanelComponent
   ],
   imports: [
     BrowserModule,
