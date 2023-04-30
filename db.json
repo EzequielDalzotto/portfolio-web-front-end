@@ -151,6 +151,14 @@
       "titulo": "Proyecto 4",
       "descripcion": "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."
     }
+  ],
+  "experiences":[
+    {
+      "id":1,
+      "img":"experiencia1.jpeg",
+      "title":"Facultad",
+      "descripcion":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui fuga cupiditate laudantium ullam sed libero nulla harum. Optio eligendi, necessitatibus explicabo nulla exercitationem aliquam ex et ratione, facilis, reprehenderit fugiat."
+    }
   ]
       
     

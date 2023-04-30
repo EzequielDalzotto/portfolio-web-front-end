@@ -26,4 +26,22 @@ export class SkillsService {
     return this.http.get<Skill[]>(this.hardApiUrl)
   }
 
+  updateSoftSkill(skill: Skill):Observable<Skill>{
+    const url = `${this.softApiUrl}/${skill.id}`
+    return this.http.put<Skill>(url, skill, httpOptions)
+  }
+
+  updateHardSkill(skill: Skill):Observable<Skill>{
+    const url = `${this.hardApiUrl}/${skill.id}`
+    return this.http.put<Skill>(url, skill, httpOptions)
+  }
+
+  addSoftSkill(skill: Skill):Observable<Skill>{
+    return this.http.post<Skill>(this.softApiUrl, skill, httpOptions)
+  }
+
+  addHardtSkill(skill: Skill):Observable<Skill>{
+    return this.http.post<Skill>(this.hardApiUrl, skill, httpOptions)
+  }
+
 }

@@ -1,14 +1,13 @@
 <section class="experiencia">
     <div class="container-fluid grid ms-0 m-0">
       <h3 class="titulo-seccion experiencia__titulo-seccion text-end mt-2">Experiencias</h3>
-      <div class="row">
+      <div class="row" *ngFor="let experience of experiences">
         <div class="col-3 text-center">
-          <img src="../../../assets/experiencia1.jpeg" alt="experiencia 1" class="rounded img-fluid img-thumbnail ft-exp">
+          <img src="../../../assets/{{experience.img}}" alt="{{experience.title}}" class="rounded img-fluid img-thumbnail ft-exp">
         </div>
         <div class="col-9 text-left mt-3">
-          <h2 class="experiencia-titulo">Facultad</h2>
-          <p class="experiencia-texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui fuga cupiditate laudantium ullam sed libero nulla harum. Optio eligendi, necessitatibus explicabo nulla exercitationem aliquam ex et ratione, facilis, reprehenderit fugiat.
-          </p>
+          <h2 class="experiencia-titulo">{{experience.title}}</h2>
+          <p class="experiencia-texto">{{experience.descripcion}}</p>
         </div>
       </div>
     </div>
