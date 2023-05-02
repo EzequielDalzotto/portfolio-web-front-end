@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -25,6 +26,7 @@ import { EducationPanelComponent } from './components/dashboard-panels/education
 import { SkillsPanelComponent } from './components/dashboard-panels/skills-panel/skills-panel.component';
 import { ProjectsPanelComponent } from './components/dashboard-panels/projects-panel/projects-panel.component';
 import { ExperiencePanelComponent } from './components/dashboard-panels/experience-panel/experience-panel.component';
+import { SocialFormComponent } from './components/forms/social-form/social-form.component';
 
 @NgModule({
   declarations: [
@@ -49,12 +51,15 @@ import { ExperiencePanelComponent } from './components/dashboard-panels/experien
     EducationPanelComponent,
     SkillsPanelComponent,
     ProjectsPanelComponent,
-    ExperiencePanelComponent
+    ExperiencePanelComponent,
+    SocialFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

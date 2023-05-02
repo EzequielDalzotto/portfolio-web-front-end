@@ -1,166 +1,163 @@
 {
-  "social-media":[
+  "social-media": [
     {
-        "id": 1,
-        "media": "Linkedin",
-        "url": "https://www.linkedin.com/in/ezequiel-dalzotto-a52bb7250/",
-        "icon":"icons8-linkedin-circled-50.png"
+      "id": 1,
+      "media": "Linkedin",
+      "url": "https://www.linkedin.com/in/ezequiel-dalzotto-a52bb7250/",
+      "icon": "icons8-linkedin-circled-50.png"
     },
     {
-        "id": 2,
-        "media": "Instagram",
-        "url": "https://www.instagram.com/EzequielDalzotto/",
-        "icon":"instagram-icon.png"
+      "id": 2,
+      "media": "Instagram",
+      "url": "https://www.instagram.com/EzequielDalzotto/",
+      "icon": "instagram-icon.png"
     },
     {
-        "id": 3,
-        "media": "Github",
-        "url": "https://github.com/EzequielDalzotto",
-        "icon": "icons8-github-60.png"
+      "id": 3,
+      "media": "Github",
+      "url": "https://github.com/EzequielDalzotto",
+      "icon": "icons8-github-60.png"
     }
   ],
   "educaciones": [
     {
-      "id":1,
+      "id": 1,
       "tipo": "Secundario",
       "periodo": "2014-2019",
       "nombre": "Comercio 1",
       "detalle": "Escuela secundaria Nro 16 Profesor Gerardo Victorin"
     },
     {
-      "id":2,
+      "id": 2,
       "tipo": "Inglés",
       "periodo": "2013-2019",
       "nombre": "Instituto E.L.A Inglés",
       "detalle": "Con First Certificate in English evaluado por Cambridge Assessment"
     },
     {
-      "id":3,
+      "id": 3,
       "tipo": "Argentina Programa",
       "periodo": "2021-2022",
       "nombre": "#YoProgramo",
       "detalle": "Primera etapa de Argentina Programa"
     },
     {
-      "id":4,
+      "id": 4,
       "tipo": "Universidad",
       "periodo": "2021-Actualidad",
       "nombre": "Facultad de Ciencias de la Administracion - UNER",
       "detalle": "Actualmente en tercer año de Licenciatura en Sistemas"
     }
   ],
-  "soft-skills":[
+  "soft-skills": [
     {
       "id": 1,
-      "name":"Trabajo en Equipo",
-      "percentage":"60"
+      "name": "Trabajo en Equipo",
+      "percentage": "60"
     },
     {
       "id": 2,
-      "name":"Comunicacion",
-      "percentage":"90"
+      "name": "Comunicacion",
+      "percentage": "90"
     },
     {
       "id": 3,
-      "name":"Proactivo",
-      "percentage":"88"
+      "name": "Proactivo",
+      "percentage": "88"
     },
     {
       "id": 4,
-      "name":"Resolucion de problemas",
-      "percentage":"78"
+      "name": "Resolucion de problemas",
+      "percentage": "78"
     },
     {
       "id": 5,
-      "name":"Flexibilidad",
-      "percentage":"97"
+      "name": "Flexibilidad",
+      "percentage": "97"
     },
     {
       "id": 6,
-      "name":"Autooorganizacion",
-      "percentage":"58"
+      "name": "Autooorganizacion",
+      "percentage": "58"
     }
   ],
-  "hard-skills":[
+  "hard-skills": [
     {
       "id": 1,
-      "name":"HTML",
-      "percentage":"97"
+      "name": "HTML",
+      "percentage": "97"
     },
     {
       "id": 2,
-      "name":"CSS",
-      "percentage":"85"
+      "name": "CSS",
+      "percentage": "85"
     },
     {
       "id": 3,
-      "name":"JS",
-      "percentage":"80"
+      "name": "JS",
+      "percentage": "80"
     },
     {
       "id": 4,
-      "name":"Typescript",
-      "percentage":"76"
+      "name": "Typescript",
+      "percentage": "76"
     },
     {
       "id": 5,
-      "name":"Angular",
-      "percentage":"5"
+      "name": "Angular",
+      "percentage": "5"
     },
     {
       "id": 6,
-      "name":"SQL",
-      "percentage":"2"
+      "name": "SQL",
+      "percentage": "2"
     }
   ],
-  "about-me" : {
+  "about-me": {
     "ft_perfil": "perfil2.jpg",
     "titulo": "Estudiante",
     "ubicacion": "Entre Rios (Argentina)",
     "descripcion": "Soy un estudiante de sistemas en FCAL UNER que le apasiona la programación en general y con muchas ganas de aprender cada vez más sobre desarrollo web. Me encanta explorar sobre nuevas tecnologías para entenderlas y poder adquirir nuevas herramientas por curiosidad y para mejorar la calidad y optimización de mi código."
   },
   "banner": {
-    "url":"banner-example2.jpg"
+    "url": "banner-example2.jpg"
   },
-  "projects":[
+  "projects": [
     {
-      "id":1,
-      "url":"",
-      "portada":"todoListImage.png",
+      "id": 1,
+      "url": "",
+      "portada": "todoListImage.png",
       "titulo": "To Do List",
       "descripcion": "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."
     },
     {
-      "id":2,
-      "url":"",
-      "portada":"calculator.jpg",
+      "id": 2,
+      "url": "",
+      "portada": "calculator.jpg",
       "titulo": "Calculadora",
       "descripcion": "This is a short card."
     },
     {
-      "id":3,
-      "url":"",
-      "portada":"sampleCompany.png",
+      "id": 3,
+      "url": "",
+      "portada": "sampleCompany.png",
       "titulo": "Proyecto 3",
       "descripcion": "This is a longer card with supporting text below as a natural lead-in to additional content."
     },
     {
-      "id":4,
-      "url":"",
-      "portada":"sampleCompany.png",
+      "id": 4,
+      "url": "",
+      "portada": "sampleCompany.png",
       "titulo": "Proyecto 4",
       "descripcion": "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."
     }
   ],
-  "experiences":[
+  "experiences": [
     {
-      "id":1,
-      "img":"experiencia1.jpeg",
-      "title":"Facultad",
-      "descripcion":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui fuga cupiditate laudantium ullam sed libero nulla harum. Optio eligendi, necessitatibus explicabo nulla exercitationem aliquam ex et ratione, facilis, reprehenderit fugiat."
+      "id": 1,
+      "img": "experiencia1.jpeg",
+      "title": "Facultad",
+      "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui fuga cupiditate laudantium ullam sed libero nulla harum. Optio eligendi, necessitatibus explicabo nulla exercitationem aliquam ex et ratione, facilis, reprehenderit fugiat."
     }
   ]
-      
-    
-
 }

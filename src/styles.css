@@ -27,6 +27,10 @@ body {
     box-shadow: none;
 }
 
+.btn-guardar:disabled{
+    background-color: #8c9c8e;
+}
+
 .btn-eliminar{
     background-color: #ffffff;
     color: #1e5631;
@@ -41,6 +45,25 @@ body {
 
 .btn-eliminar:focus, .btn-eliminar:active{
     background-color: #ee6969;
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+.btn-cancelar{
+    background-color: #ffffff;
+    color: #1e5631;
+    font-weight: 500;
+    margin-top: 10px;
+    border: none;
+}
+
+.btn-cancelar:hover{
+    background-color: #dbb479;
+}
+
+.btn-cancelar:focus, .btn-cancelar:active{
+    background-color: #dbb479;
     outline: none;
     border: none;
     box-shadow: none;

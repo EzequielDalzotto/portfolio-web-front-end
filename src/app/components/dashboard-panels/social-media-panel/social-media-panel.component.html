@@ -1,8 +1,5 @@
 <form>
     <div class="my-3" *ngFor="let social_network of social_networks">
-        <label for="{{social_network.media}}" class="form-label">{{social_network.media}}</label>
-        <input type="text" class="form-control" id="{{social_network.media}}" [placeholder]="social_network.url">
-        <button type="button" class="btn btn-primary btn-guardar">Guardar</button>
-        <button type="button" class="btn btn-primary btn-eliminar ms-2">Eliminar</button>
+        <app-social-form (onSaveMedia)="saveChanges($event)" [social_network]="social_network"></app-social-form>
     </div>
 </form>
