@@ -22,4 +22,13 @@ export class SkillsPanelComponent implements OnInit{
       this.hardSkills = hardSkills
     ])
   }
+
+  saveSoftChanges(softSkill:Skill){
+    this.skillsService.updateSoftSkill(softSkill).subscribe();
+    alert("Soft Skill Modificada")
+  }
+  saveHardChanges(hardSkill:Skill){
+    this.skillsService.updateHardSkill(hardSkill).subscribe();
+    alert("Hard Skill Modificada")
+  }
 }

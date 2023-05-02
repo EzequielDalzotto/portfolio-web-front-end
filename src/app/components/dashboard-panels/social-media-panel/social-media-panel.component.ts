@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SocialMediaService } from 'src/app/services/social-media.service';
 import { SocialMedia } from 'src/app/model/social-media';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-social-media-panel',
@@ -11,12 +10,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class SocialMediaPanelComponent implements OnInit {
   
   social_networks: SocialMedia[] = [];
-  socialForm: FormGroup;
 
-  constructor(private socialMediaService:SocialMediaService, private formBuilder: FormBuilder) {
-    this.socialForm = this.formBuilder.group({
-      socialUrl:['',[Validators.required]]
-    })
+  constructor(private socialMediaService:SocialMediaService) {
+
   }
 
   ngOnInit(): void {
