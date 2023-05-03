@@ -40,8 +40,18 @@ export class SkillsService {
     return this.http.post<Skill>(this.softApiUrl, skill, httpOptions)
   }
 
-  addHardtSkill(skill: Skill):Observable<Skill>{
+  addHardSkill(skill: Skill):Observable<Skill>{
     return this.http.post<Skill>(this.hardApiUrl, skill, httpOptions)
+  }
+  
+  deleteSoftSkill(skill:Skill): Observable<Skill>{
+    const url = `${this.softApiUrl}/${skill.id}`
+    return this.http.delete<Skill>(url)
+  }
+
+  deleteHardSkill(skill:Skill): Observable<Skill>{
+    const url = `${this.hardApiUrl}/${skill.id}`
+    return this.http.delete<Skill>(url)
   }
 
 }

@@ -10,6 +10,8 @@ import { Skill } from 'src/app/model/skill';
 export class SkillsPanelComponent implements OnInit{
   softSkills: Skill[] = [];
   hardSkills: Skill[] = [];
+  onAddingSK:boolean = false;
+  onAddingHK:boolean = false;
 
   constructor(private skillsService: SkillsService) {  }
 
@@ -23,6 +25,13 @@ export class SkillsPanelComponent implements OnInit{
     ])
   }
 
+  toggleOnAddingSK(){
+    this.onAddingSK =! this.onAddingSK;
+  }
+  toggleOnAddingHK(){
+    this.onAddingHK =! this.onAddingHK;
+  }
+
   saveSoftChanges(softSkill:Skill){
     this.skillsService.updateSoftSkill(softSkill).subscribe();
     alert("Soft Skill Modificada")
@@ -30,5 +39,31 @@ export class SkillsPanelComponent implements OnInit{
   saveHardChanges(hardSkill:Skill){
     this.skillsService.updateHardSkill(hardSkill).subscribe();
     alert("Hard Skill Modificada")
+  }
+
+  addSoftSkill(softSkill:Skill){
+    this.skillsService.addSoftSkill(softSkill).subscribe((softSkill)=>[
+      this.softSkills.push(softSkill)
+    ])
+    this.toggleOnAddingSK()
+  }
+  addHardSkill(hardSkill:Skill){
+    this.skillsService.addHardSkill(hardSkill).subscribe((hardSkill)=>[
+      this.hardSkills.push(hardSkill)
+    ])
+    this.toggleOnAddingHK()
+  }
+
+  removeSoftSkill(softSkill:Skill){
+    this.skillsService.deleteSoftSkill(softSkill).subscribe(()=>[
+      this.softSkills = this.softSkills.filter( (s) => s.id !== softSkill.id)
+    ])
+    alert(softSkill.name + ": Removida")
+  }
+  removeHardSkill(hardSkill:Skill){
+    this.skillsService.deleteHardSkill(hardSkill).subscribe(()=>[
+      this.hardSkills= this.hardSkills.filter((s) => s.id !== hardSkill.id)
+    ])
+    alert(hardSkill.name + ": Removida")
   }
 }

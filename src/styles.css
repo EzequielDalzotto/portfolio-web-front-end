@@ -89,6 +89,26 @@ body {
     box-shadow: none;
 }
 
+.btn-cancelar-añadir{
+    background-color: #d4908e;
+    color: #ffffff;
+    font-weight: 500;
+    margin-top: 5px;
+    border: none;
+    width: 100%;
+}
+
+.btn-cancelar-añadir:hover{
+    background-color: #ee6969;
+}
+
+.btn-cancelar-añadir:focus, .btn-cancelar-añadir:active{
+    background-color: #ee6969;
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
 .form-file::file-selector-button{
     background-color: #ffffff;
     color: #1e5631;

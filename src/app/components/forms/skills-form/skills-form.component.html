@@ -9,7 +9,7 @@
             <input type="text" formControlName="percentage" class="form-control col-3" id="porcentaje" [placeholder]="skill.percentage">
         </div>
         <button type="submit" [disabled]="skillForm.invalid" class="btn btn-primary btn-guardar">Guardar</button>
-        <button type="button" class="btn btn-primary btn-eliminar ms-2">Eliminar</button>
+        <button type="button" (click)="onDelete(skill)" class="btn btn-primary btn-eliminar ms-2">Eliminar</button>
     </form>
 </div>
 
@@ -17,11 +17,11 @@
     <form [formGroup]="skillForm" (ngSubmit)="onSave()">
         <div class="my-3 col-6">
             <label for="skill" class="form-label">Nueva Habilidad</label>
-            <input type="text" class="form-control" id="skill" placeholder="Habilidad">
+            <input type="text" formControlName="name" class="form-control" id="skill" placeholder="Habilidad">
         </div>
         <div class="my-3 col-2">
             <label for="porcentaje" class="form-label">Nuevo Porcentaje</label>
-            <input type="text" class="form-control col-3" id="porcentaje" placeholder="porcentaje">
+            <input type="text" formControlName="percentage" class="form-control col-3" id="porcentaje" placeholder="porcentaje">
         </div>
         <button type="submit" [disabled]="skillForm.invalid" class="btn btn-primary btn-guardar">Guardar</button>
         <button type="button" class="btn btn-primary btn-eliminar ms-2">Eliminar</button>
