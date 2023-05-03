@@ -1,5 +1,3 @@
-<form>
-    <div class="my-3" *ngFor="let social_network of social_networks">
-        <app-social-form (onSaveMedia)="saveChanges($event)" [social_network]="social_network"></app-social-form>
-    </div>
-</form>
+<div class="my-3" *ngFor="let social_network of social_networks">
+    <app-social-form (onSaveMedia)="saveChanges($event)" [social_network]="social_network"></app-social-form>
+</div>

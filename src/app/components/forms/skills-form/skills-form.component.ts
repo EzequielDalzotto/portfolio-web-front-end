@@ -9,28 +9,28 @@ import { Skill } from 'src/app/model/skill';
 })
 export class SkillsFormComponent {
   @Input() skill?:Skill;
-  @Output() onSaveMedia: EventEmitter<Skill> = new EventEmitter();
-  @Output() onDeleteMedia: EventEmitter<Skill> = new EventEmitter();
+  @Output() onSaveSkill: EventEmitter<Skill> = new EventEmitter();
+  @Output() onDeleteSkill: EventEmitter<Skill> = new EventEmitter();
 
   skillForm: FormGroup;
 
   constructor(private formBuilder: FormBuilder) {
     this.skillForm = this.formBuilder.group({
-      skillName:['',[Validators.required]],
+      name:['',[Validators.required]],
       percentage:['',[Validators.required]]
     })
   }
 
   onSave(){
     if(this.skill){
-      this.skill.name = this.skillForm.value.skillName
+      this.skill.name = this.skillForm.value.name
       this.skill.percentage = this.skillForm.value.percentage
-      this.onSaveMedia.emit(this.skill)
+      this.onSaveSkill.emit(this.skill)
       this.skillForm.reset()
     }
   }
 
   onDelete(skill: Skill){
-    this.onDeleteMedia.emit(skill)
+    this.onDeleteSkill.emit(skill)
   }
 }

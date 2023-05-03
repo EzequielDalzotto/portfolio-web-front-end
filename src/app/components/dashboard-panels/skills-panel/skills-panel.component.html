@@ -2,7 +2,7 @@
 <div class=" my-3 softSkills-container">
     <h4>Soft Skills</h4>
     <div class="my-3 soft-1 grupo-info" *ngFor="let soft_skill of softSkills">
-        <app-skills-form (onSaveMedia)="saveSoftChanges($event)" [skill]="soft_skill"></app-skills-form>
+        <app-skills-form (onSaveSkill)="saveSoftChanges($event)" [skill]="soft_skill"></app-skills-form>
     </div>
     <button type="button" class="btn btn-primary btn-añadir">Añadir Habilidad</button>
 </div>
@@ -11,7 +11,7 @@
 <div class=" my-3 hardSkills-container">
     <h4>Hard Skills</h4>
     <div class="my-3 hard-1 grupo-info" *ngFor="let hard_skill of hardSkills">
-        <app-skills-form (onSaveMedia)="saveHardChanges($event)" [skill]="hard_skill"></app-skills-form>
+        <app-skills-form (onSaveSkill)="saveHardChanges($event)" [skill]="hard_skill"></app-skills-form>
     </div>
     <button type="button" class="btn btn-primary btn-añadir">Añadir Habilidad</button>
 </div>
