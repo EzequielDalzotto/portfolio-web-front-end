@@ -159,5 +159,22 @@
       "title": "Facultad",
       "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui fuga cupiditate laudantium ullam sed libero nulla harum. Optio eligendi, necessitatibus explicabo nulla exercitationem aliquam ex et ratione, facilis, reprehenderit fugiat."
     }
+  ],
+  "certificates": [
+    {
+      "id":1,
+      "nombre": "Secundario",
+      "img" : "../../../assets/sample certificate 1.jpg"
+    },
+    {
+      "id":2,
+      "nombre": "Ingles",
+      "img" : "../../../assets/sample certificate 2.jpg"
+    },
+    {
+      "id":3,
+      "nombre": "#YoProgramo",
+      "img" : "../../../assets/sample certificate 3.jpg"
+    }
   ]
 }
