@@ -162,19 +162,19 @@
   ],
   "certificates": [
     {
-      "id":1,
+      "id": 1,
       "nombre": "Secundario",
-      "img" : "../../../assets/sample certificate 1.jpg"
+      "img": "../../../assets/sample certificate 1.jpg"
     },
     {
-      "id":2,
+      "id": 2,
       "nombre": "Ingles",
-      "img" : "../../../assets/sample certificate 2.jpg"
+      "img": "../../../assets/sample certificate 2.jpg"
     },
     {
-      "id":3,
+      "id": 3,
       "nombre": "#YoProgramo",
-      "img" : "../../../assets/sample certificate 3.jpg"
+      "img": "../../../assets/sample certificate 3.jpg"
     }
   ]
 }

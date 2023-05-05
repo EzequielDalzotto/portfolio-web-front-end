@@ -1,0 +1,45 @@
+<div *ngIf="education;else nuevo">
+    <form [formGroup]="educationForm" (ngSubmit)="onSave()">
+        <div class="my-3">
+            <label for="tipoEducacion" class="form-label">Tipo de educacion</label>
+            <input type="text" formControlName="tipo" class="form-control" id="tipoEducacion" [placeholder]="education.tipo">
+        </div>
+        <div class="my-3 col-3">
+            <label for="años" class="form-label">Años</label>
+            <input type="text" formControlName="periodo" class="form-control" id="años" [placeholder]="education.periodo">
+        </div>
+        <div class="my-3">
+            <label for="lugar" class="form-label">Nombre</label>
+            <input type="text" formControlName="nombre" class="form-control" id="lugar" [placeholder]="education.nombre">
+        </div>
+        <div class="my-3">
+            <label for="descripcion-curso" class="form-label">Descripcion</label>
+            <textarea class="form-control" formControlName="detalle" id="descripcion-curso" rows="2" [placeholder]="education.detalle"></textarea>
+        </div>
+        <button type="submit" [disabled]="educationForm.invalid" class="btn btn-primary btn-guardar">Guardar</button>
+        <button type="button" (click)="onDelete(education)" class="btn btn-primary btn-eliminar ms-2">Eliminar</button>
+    </form>
+</div>
+
+<ng-template #nuevo>
+    <form [formGroup]="educationForm" (ngSubmit)="onSave()">
+        <div class="my-3">
+            <label for="tipoEducacion" class="form-label">Tipo de educacion</label>
+            <input type="text" formControlName="tipo" class="form-control" id="tipoEducacion" placeholder="Tipo de Educacion">
+        </div>
+        <div class="my-3 col-3">
+            <label for="años" class="form-label">Años</label>
+            <input type="text" formControlName="periodo" class="form-control" id="años" placeholder="Periodo de educacion">
+        </div>
+        <div class="my-3">
+            <label for="lugar" class="form-label">Nombre</label>
+            <input type="text" formControlName="nombre" class="form-control" id="lugar" placeholder="Nombre de educacion">
+        </div>
+        <div class="my-3">
+            <label for="descripcion-curso" class="form-label">Descripcion</label>
+            <textarea class="form-control" formControlName="detalle" id="descripcion-curso" rows="2" placeholder="Descripcion"></textarea>
+        </div>
+        <button type="submit" [disabled]="educationForm.invalid" class="btn btn-primary btn-guardar">Guardar</button>
+        <button type="button" class="btn btn-primary btn-eliminar ms-2">Eliminar</button>
+    </form>
+</ng-template>

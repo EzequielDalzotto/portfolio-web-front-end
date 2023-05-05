@@ -30,4 +30,10 @@ export class EducationsService {
   addEducacion(educacion: Educacion):Observable<Educacion>{
     return this.http.post<Educacion>(this.apiUrl, educacion, httpOptions)
   }
+
+  deleteEducacion(educacion:Educacion): Observable<Educacion>{
+    const url = `${this.apiUrl}/${educacion.id}`
+    return this.http.delete<Educacion>(url)
+  }
+
 }

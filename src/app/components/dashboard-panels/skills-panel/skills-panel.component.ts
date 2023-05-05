@@ -62,7 +62,7 @@ export class SkillsPanelComponent implements OnInit{
   }
   removeHardSkill(hardSkill:Skill){
     this.skillsService.deleteHardSkill(hardSkill).subscribe(()=>[
-      this.hardSkills= this.hardSkills.filter((s) => s.id !== hardSkill.id)
+      this.hardSkills= this.hardSkills.filter((e) => e.id !== hardSkill.id)
     ])
     alert(hardSkill.name + ": Removida")
   }

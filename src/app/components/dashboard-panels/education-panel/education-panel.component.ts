@@ -10,6 +10,7 @@ import { Educacion } from 'src/app/model/educacion';
 export class EducationPanelComponent implements OnInit{
   
   educations: Educacion[] = [];
+  onAdding:boolean = false;
 
   constructor(private educationService: EducationsService) {  }
 
@@ -17,5 +18,28 @@ export class EducationPanelComponent implements OnInit{
     this.educationService.getEducations().subscribe((educations)=>[
       this.educations = educations
     ])
+  }
+
+  toggleOnAdding(){
+    this.onAdding =! this.onAdding;
+  }
+
+  saveEducation(education:Educacion){
+    this.educationService.updateEducacion(education).subscribe();
+    alert("Educacion Modificada")
+  }
+
+  addEducacion(education:Educacion){
+    this.educationService.addEducacion(education).subscribe((education)=>[
+      this.educations.push(education)
+    ])
+    this.toggleOnAdding()
+  }
+
+  removeEducation(education:Educacion){
+    this.educationService.deleteEducacion(education).subscribe(()=>[
+      this.educations = this.educations.filter( (s) => s.id !== education.id)
+    ])
+    alert(education.nombre + ": Removida")
   }
 }
