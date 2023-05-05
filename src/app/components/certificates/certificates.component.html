@@ -1,18 +1,10 @@
 <div id="carouselCertificados" class="carousel carousel-dark slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselCertificados" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselCertificados" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselCertificados" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" *ngFor="let certificate of certificates;let i = index" data-bs-target="#carouselCertificados" [attr.data-bs-slide-to]="i" aria-current="true" aria-label="..." [ngClass]="{'active': i == 0}"></button>
     </div>
     <div class="carousel-inner">
-      <div class="carousel-item active" data-bs-interval="8000">
-        <img src="../../../assets/sample certificate 1.jpg" class="d-block w-100 certificado" alt="Secundario">
-      </div>
-      <div class="carousel-item" data-bs-interval="8000">
-        <img src="../../../assets/sample certificate 2.jpg" class="d-block w-100 certificado" alt="Ingles">
-      </div>
-      <div class="carousel-item" data-bs-interval="8000">
-        <img src="../../../assets/sample certificate 3.jpg" class="d-block w-100 certificado" alt="#YoProgramo">
+      <div *ngFor="let certificate of certificates;let i = index" class="carousel-item" [ngClass]="{'active' : i == 0}" data-bs-interval="8000">
+        <img src="{{certificate.img}}" class="d-block w-100 certificado" alt="{{certificate.nombre}}">
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselCertificados" data-bs-slide="prev">
