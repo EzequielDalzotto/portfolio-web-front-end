@@ -19,4 +19,9 @@ export class BannerService {
   getBanner():Observable<any>{
     return this.http.get(this.apiUrl)
   }
+
+  updateBanner(banner: any):Observable<any>{
+    const url = this.apiUrl
+    return this.http.put<any>(url, banner, httpOptions)
+  }
 }
