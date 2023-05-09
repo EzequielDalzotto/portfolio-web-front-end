@@ -10,6 +10,10 @@ section.banner{
     align-items: center;
 }
 
+.banner-txt{
+    user-select: none;
+}
+
 h1.banner-txt{
     padding-top: 10%;
     font-size: 10vh;
@@ -41,3 +45,11 @@ h2.banner-txt{
     -webkit-background-clip: text;
     -webkit-text-fill-color: rgba(255, 255, 255, 0);
 }
+@keyframes animate {
+    0% {
+      background-position: -300%;
+    }
+    100% {
+      background-position: 50%;
+    }
+  }
