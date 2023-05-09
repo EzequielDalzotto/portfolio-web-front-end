@@ -3,8 +3,6 @@
         <label for="socialUrl" class="form-label">{{social_network.media}}</label>
         <input type="text" class="form-control" formControlName="socialUrl" id="socialUrl" [placeholder]="social_network.url">
         <button type="submit" [disabled]="socialForm.invalid" class="btn btn-primary btn-guardar">Guardar</button>
-        <button type="button" class="btn btn-primary btn-cancelar ms-2">Cancelar</button>
-        <button type="button" class="btn btn-primary btn-eliminar ms-2">Eliminar</button>
     </form>
 </div>
 
@@ -14,7 +12,5 @@
         <label for="socialUrl" class="form-label">Red Social</label>
         <input type="text" class="form-control" formControlName="socialUrl" id="socialUrl" placeholder="Ingrese el url de la red social">
         <button type="submit" [disabled]="socialForm.invalid" class="btn btn-primary btn-guardar">Guardar</button>
-        <button type="button" class="btn btn-primary btn-cancelar ms-2">Cancelar</button>
-        <button type="button" class="btn btn-primary btn-eliminar ms-2">Eliminar</button>
     </form>
 </ng-template>
