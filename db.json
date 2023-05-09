@@ -155,7 +155,7 @@
   "experiences": [
     {
       "id": 1,
-      "img": "experiencia1.jpeg",
+      "img": "../../../assets/experiencia1.jpeg",
       "title": "Facultad",
       "descripcion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui fuga cupiditate laudantium ullam sed libero nulla harum. Optio eligendi, necessitatibus explicabo nulla exercitationem aliquam ex et ratione, facilis, reprehenderit fugiat."
     }

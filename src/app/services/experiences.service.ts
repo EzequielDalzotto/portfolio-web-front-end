@@ -29,4 +29,9 @@ export class ExperiencesService {
   addExperience(experience: Experience):Observable<Experience>{
     return this.http.post<Experience>(this.apiUrl, experience, httpOptions)
   }
+
+  deleteExperience(experience:Experience): Observable<Experience>{
+    const url = `${this.apiUrl}/${experience.id}`
+    return this.http.delete<Experience>(url)
+  }
 }

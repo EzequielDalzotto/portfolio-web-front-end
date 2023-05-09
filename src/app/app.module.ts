@@ -29,6 +29,7 @@ import { ExperiencePanelComponent } from './components/dashboard-panels/experien
 import { SocialFormComponent } from './components/forms/social-form/social-form.component';
 import { SkillsFormComponent } from './components/forms/skills-form/skills-form.component';
 import { EducationFormComponent } from './components/forms/education-form/education-form.component';
+import { ExperienceFormComponent } from './forms/experience-form/experience-form.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { EducationFormComponent } from './components/forms/education-form/educat
     ExperiencePanelComponent,
     SocialFormComponent,
     SkillsFormComponent,
-    EducationFormComponent
+    EducationFormComponent,
+    ExperienceFormComponent
   ],
   imports: [
     BrowserModule,

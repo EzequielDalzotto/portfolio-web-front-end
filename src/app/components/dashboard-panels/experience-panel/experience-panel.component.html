@@ -2,20 +2,16 @@
     <h4>Experiencias</h4>
 
     <div class="my-3 experience grupo-info" *ngFor="let experience of experiences">
-        <div class="my-3">
-            <label for="formFile" class="form-label">Portada de la Experienca</label>
-            <input class="form-control form-file" type="file" id="formFile">
-        </div>
-        <div class="my-3">
-            <label for="tituloExperiencia" class="form-label">Titulo de Experienca</label>
-            <input type="text" class="form-control" id="tituloExperiencia" [placeholder]="experience.title">
-        </div>
-        <div class="my-3">
-            <label for="descripcion-experiencia" class="form-label">Descripcion</label>
-            <textarea class="form-control" id="descripcion-experiencia" rows="2" [placeholder]="experience.descripcion"></textarea>
-        </div>
-        <button type="button" class="btn btn-primary btn-guardar">Guardar</button>
-        <button type="button" class="btn btn-primary btn-eliminar ms-2">Eliminar</button>
+        <app-experience-form
+            (onSaveExperience)="saveExperience($event)"
+            (onDeleteExperience)="removeExperience($event)"
+            [experience]="experience"
+        ></app-experience-form>
     </div>
-    <button type="button" class="btn btn-primary btn-añadir">Añadir Experienca</button>
+    <div *ngIf="onAdding">
+        <h4>Nueva Experienca</h4>
+        <app-experience-form (onSaveExperience)="addExperience($event)"></app-experience-form>
+    </div>
+    <button *ngIf="!onAdding" type="button" (click)="toggleOnAdding()" class="btn btn-primary btn-añadir">Añadir Experienca</button>
+    <button *ngIf="onAdding" type="button" (click)="toggleOnAdding()" class="btn btn-primary btn-cancelar-añadir">Deshacer</button>
 </div>

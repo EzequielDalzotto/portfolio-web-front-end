@@ -1,0 +1,36 @@
+<div *ngIf="experience;else nuevo">
+    <form [formGroup]="experienceForm" (ngSubmit)="onSave()">
+        <div class="my-3">
+            <label for="portada" class="form-label">Portada de la Experienca</label>
+            <input formControlName="img" class="form-control" type="text" id="portada" [placeholder]="experience.img">
+        </div>
+        <div class="my-3">
+            <label for="tituloExperiencia" class="form-label">Titulo de Experienca</label>
+            <input formControlName="titulo" type="text" class="form-control" id="tituloExperiencia" [placeholder]="experience.title">
+        </div>
+        <div class="my-3">
+            <label for="descripcion-experiencia" class="form-label">Descripcion</label>
+            <textarea formControlName="descripcion" class="form-control" id="descripcion-experiencia" rows="2" [placeholder]="experience.descripcion"></textarea>
+        </div>
+        <button type="submit" [disabled]="experienceForm.invalid" class="btn btn-primary btn-guardar">Guardar</button>
+        <button type="button" (click)="onDelete(experience)" class="btn btn-primary btn-eliminar ms-2">Eliminar</button>
+    </form>
+</div>
+
+<ng-template #nuevo>
+    <form [formGroup]="experienceForm" (ngSubmit)="onSave()">
+        <div class="my-3">
+            <label for="portada" class="form-label">Portada de la Experienca</label>
+            <input formControlName="img" class="form-control" type="text" id="portada" placeholder="Nueva Portada">
+        </div>
+        <div class="my-3">
+            <label for="tituloExperiencia" class="form-label">Titulo de Experienca</label>
+            <input formControlName="titulo" type="text" class="form-control" id="tituloExperiencia" placeholder="Nuevo Titulo">
+        </div>
+        <div class="my-3">
+            <label for="descripcion-experiencia" class="form-label">Descripcion</label>
+            <textarea formControlName="descripcion" class="form-control" id="descripcion-experiencia" rows="2" placeholder="Nueva Descripcion"></textarea>
+        </div>
+        <button type="submit" [disabled]="experienceForm.invalid" class="btn btn-primary btn-guardar">Guardar</button>
+    </form>
+</ng-template>
