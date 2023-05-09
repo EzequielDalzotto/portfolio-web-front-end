@@ -1,23 +1,19 @@
-<form>
+<form [formGroup]="aboutForm" (ngSubmit)="onSave()">
     <div class="my-3">
-        <label for="formFile" class="form-label">Foto de Perfil</label>
-        <input class="form-control form-file" type="file" id="formFile">
-        <button type="button" class="btn btn-primary btn-guardar">Actualizar</button>
+        <label for="ftPerfil" class="form-label">Foto de Perfil</label>
+        <input class="form-control" formControlName="ftPerfil" [ngClass]="{'noChanges' : ftPerfil?.hasError('required')}" type="text" id="ftPerfil" [placeholder]="about_me.ft_perfil">
     </div>
     <div class="my-3">
         <label for="tituloActual" class="form-label">Titulo</label>
-        <input type="text" class="form-control" id="tituloActual" [placeholder]="about_me.titulo">
-        <button type="button" class="btn btn-primary btn-guardar">Actualizar</button>
+        <input type="text" formControlName="titulo" [ngClass]="{'noChanges' : titulo?.hasError('required')}" class="form-control" id="tituloActual" [placeholder]="about_me.titulo">
     </div>
     <div class="my-3">
         <label for="ubicacion" class="form-label">Ubicacion</label>
-        <input type="text" class="form-control" id="ubicacion" [placeholder]="about_me.ubicacion">
-        <button type="button" class="btn btn-primary btn-guardar">Actualizar</button>
+        <input type="text" formControlName="ubicacion" [ngClass]="{'noChanges' : ubicacion?.hasError('required')}" class="form-control" id="ubicacion" [placeholder]="about_me.ubicacion">
     </div>
-    <div class="mb-3">
+    <div class="mt-3">
         <label for="descripcion" class="form-label">Descripcion</label>
-        <textarea class="form-control" id="descripcion" rows="3" [placeholder]="about_me.descripcion"></textarea>
-        <button type="button" class="btn btn-primary btn-guardar">Guardar</button>
-        <button type="button" class="btn btn-primary btn-eliminar ms-2">Eliminar</button>
+        <textarea class="form-control" formControlName="descripcion" [ngClass]="{'noChanges' : descripcion?.hasError('required')}" id="descripcion" rows="3" [placeholder]="about_me.descripcion"></textarea>
     </div>
+    <button type="submit" class="btn btn-primary btn-guardar">Guardar</button>
 </form>

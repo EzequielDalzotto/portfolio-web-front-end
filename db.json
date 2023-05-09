@@ -114,7 +114,7 @@
     }
   ],
   "about-me": {
-    "ft_perfil": "perfil2.jpg",
+    "ft_perfil": "../../../assets/perfil2.jpg",
     "titulo": "Estudiante",
     "ubicacion": "Entre Rios (Argentina)",
     "descripcion": "Soy un estudiante de sistemas en FCAL UNER que le apasiona la programación en general y con muchas ganas de aprender cada vez más sobre desarrollo web. Me encanta explorar sobre nuevas tecnologías para entenderlas y poder adquirir nuevas herramientas por curiosidad y para mejorar la calidad y optimización de mi código."

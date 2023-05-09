@@ -20,4 +20,9 @@ export class AboutMeService {
   getAboutMe():Observable<any>{
     return this.http.get(this.apiUrl)
   }
+
+  updateAbout(about_me: any):Observable<any>{
+    const url = this.apiUrl
+    return this.http.put<any>(url, about_me, httpOptions)
+  }
 }
