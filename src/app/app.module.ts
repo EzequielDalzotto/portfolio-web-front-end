@@ -31,6 +31,7 @@ import { SkillsFormComponent } from './components/forms/skills-form/skills-form.
 import { EducationFormComponent } from './components/forms/education-form/education-form.component';
 import { ExperienceFormComponent } from './components/forms/experience-form/experience-form.component';
 import { ProjectFormComponent } from './components/forms/project-form/project-form.component';
+import { CertificateFormComponent } from './components/forms/certificate-form/certificate-form.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +61,8 @@ import { ProjectFormComponent } from './components/forms/project-form/project-fo
     SkillsFormComponent,
     EducationFormComponent,
     ExperienceFormComponent,
-    ProjectFormComponent
+    ProjectFormComponent,
+    CertificateFormComponent
   ],
   imports: [
     BrowserModule,

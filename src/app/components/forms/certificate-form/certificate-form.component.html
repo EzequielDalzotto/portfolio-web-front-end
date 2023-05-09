@@ -1,0 +1,28 @@
+<div *ngIf="certificate;else nuevo">
+    <form [formGroup]="certificateForm" (ngSubmit)="onSave()">
+        <div class="my-3">
+            <label for="nombre" class="form-label">Nombre del Certificado</label>
+            <input formControlName="nombre" class="form-control" type="text" id="nombre" [placeholder]="certificate.nombre">
+        </div>
+        <div class="my-3">
+            <label for="imagen" class="form-label">Imagen del Certificado</label>
+            <input formControlName="img" class="form-control" type="text" id="imagen" [placeholder]="certificate.img">
+        </div>
+        <button type="submit" [disabled]="certificateForm.invalid" class="btn btn-primary btn-guardar">Actualizar</button>
+        <button type="button" (click)="onDelete(certificate)" class="btn btn-primary btn-eliminar ms-2">Eliminar</button>
+    </form>
+</div>
+
+<ng-template #nuevo>
+    <form [formGroup]="certificateForm" (ngSubmit)="onSave()">
+        <div class="my-3">
+            <label for="nombre" class="form-label">Nombre del Certificado</label>
+            <input formControlName="nombre" class="form-control" type="text" id="nombre" placeholder="Nombre del Certificado">
+        </div>
+        <div class="my-3">
+            <label for="imagen" class="form-label">Imagen del Certificado</label>
+            <input formControlName="img" class="form-control" type="text" id="imagen" placeholder="Imagen del Certificado">
+        </div>
+        <button type="submit" [disabled]="certificateForm.invalid" class="btn btn-primary btn-guardar">Guardar</button>
+    </form>
+</ng-template>

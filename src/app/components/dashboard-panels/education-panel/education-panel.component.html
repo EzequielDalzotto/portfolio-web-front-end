@@ -22,34 +22,17 @@
 <div class=" my-3 certificates-container">
     <h4>Certificaciones</h4>
     <!-- TODO DYNAMIC -->
-    <div class="my-3 certificado-1">
-        <label for="formFile" class="form-label">Imagen del Certificado</label>
-        <input class="form-control form-file" type="file" id="formFile">
-        <button type="button" class="btn btn-primary btn-guardar">Actualizar</button>
-        <button type="button" class="btn btn-primary btn-eliminar ms-2">Eliminar</button>
-
+    <div class="my-3 educacion-1 grupo-info" *ngFor="let certificate of certificates">
+        <app-certificate-form
+            (onSaveCertificate)="saveCertificate($event)"
+            (onDeleteCertificate)="removeCertificate($event)"
+            [certificate]="certificate"
+        ></app-certificate-form>
     </div>
-    
-    <div class="my-3 certificado-2">
-        <label for="formFile" class="form-label">Imagen del Certificado</label>
-        <input class="form-control form-file" type="file" id="formFile">
-        <button type="button" class="btn btn-primary btn-guardar">Actualizar</button>
-        <button type="button" class="btn btn-primary btn-eliminar ms-2">Eliminar</button>
+    <div *ngIf="onAddingCert">
+        <h4>Nuevo Certificado</h4>
+        <app-certificate-form (onSaveCertificate)="addCertificate($event)"></app-certificate-form>
     </div>
-    
-    <div class="my-3 certificado-3">
-        <label for="formFile" class="form-label">Imagen del Certificado</label>
-        <input class="form-control form-file" type="file" id="formFile">
-        <button type="button" class="btn btn-primary btn-guardar">Actualizar</button>
-        <button type="button" class="btn btn-primary btn-eliminar ms-2">Eliminar</button>
-    </div>
-    
-    <div class="my-3 certificado-4">
-        <label for="formFile" class="form-label">Imagen del Certificado</label>
-        <input class="form-control form-file" type="file" id="formFile">
-        <button type="button" class="btn btn-primary btn-guardar">Actualizar</button>
-        <button type="button" class="btn btn-primary btn-eliminar ms-2">Eliminar</button>
-    </div>
-
-    <button type="button" class="btn btn-primary btn-añadir">Añadir Certificado</button>
+    <button *ngIf="!onAddingCert" type="button" (click)="toggleOnAddingCert()" class="btn btn-primary btn-añadir">Añadir Certificado</button>
+    <button *ngIf="onAddingCert" type="button" (click)="toggleOnAddingCert()" class="btn btn-primary btn-cancelar-añadir">Deshacer</button>
 </div>

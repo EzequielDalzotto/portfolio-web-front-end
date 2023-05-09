@@ -182,6 +182,11 @@
       "id": 3,
       "nombre": "#YoProgramo",
       "img": "../../../assets/sample certificate 3.jpg"
+    },
+    {
+      "nombre": "Titulo Secundario",
+      "img": "https://marketplace.canva.com/EAE7srfpYAo/1/0/1600w/canva-brown-decorative-certificate-of-completion-YAwShCEKfVg.jpg",
+      "id": 4
     }
   ]
 }
