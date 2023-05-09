@@ -2,24 +2,16 @@
     <h4>Proyectos</h4>
 
     <div class="my-3 proyecto-1 grupo-info" *ngFor="let project of projects">
-        <div class="my-3">
-            <label for="formFile" class="form-label">Caratula del Proyecto</label>
-            <input class="form-control form-file" type="file" id="formFile">
-        </div>
-        <div class="my-3">
-            <label for="tituloProyecto" class="form-label">Proyecto</label>
-            <input type="text" class="form-control" id="tituloProyecto" [placeholder]="project.titulo">
-        </div>
-        <div class="my-3">
-            <label for="descripcion-proyecto" class="form-label">Descripcion</label>
-            <textarea class="form-control" id="descripcion-proyecto" rows="2" [placeholder]="project.descripcion"></textarea>
-        </div>
-        <div class="my-3">
-            <label for="url-proyecto" class="form-label">Enlace al proyecto</label>
-            <input type="text" class="form-control" id="url-proyecto" [placeholder]="project.url">
-        </div>
-        <button type="button" class="btn btn-primary btn-guardar">Guardar</button>
-        <button type="button" class="btn btn-primary btn-eliminar ms-2">Eliminar</button>
+        <app-project-form
+            (onSaveProject)="saveProject($event)"
+            (onDeleteProject)="removeProject($event)"
+            [project]="project"
+        ></app-project-form>
     </div>
-    <button type="button" class="btn btn-primary btn-añadir">Añadir Proyecto</button>
+    <div *ngIf="onAdding">
+        <h4>Nuevo Proyecto</h4>
+        <app-project-form (onSaveProject)="addProject($event)"></app-project-form>
+    </div>
+    <button *ngIf="!onAdding" type="button" (click)="toggleOnAdding()" class="btn btn-primary btn-añadir">Añadir Proyecto</button>
+    <button *ngIf="onAdding" type="button" (click)="toggleOnAdding()" class="btn btn-primary btn-cancelar-añadir">Deshacer</button>
 </div>

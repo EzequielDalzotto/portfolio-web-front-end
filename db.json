@@ -125,31 +125,38 @@
   "projects": [
     {
       "id": 1,
-      "url": "",
-      "portada": "todoListImage.png",
+      "url": "#",
+      "portada": "../../../assets/todoListImage.png",
       "titulo": "To Do List",
       "descripcion": "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."
     },
     {
       "id": 2,
-      "url": "",
-      "portada": "calculator.jpg",
+      "url": "#",
+      "portada": "../../../assets/calculator.jpg",
       "titulo": "Calculadora",
       "descripcion": "This is a short card."
     },
     {
       "id": 3,
-      "url": "",
-      "portada": "sampleCompany.png",
+      "url": "#",
+      "portada": "../../../assets/sampleCompany.png",
       "titulo": "Proyecto 3",
       "descripcion": "This is a longer card with supporting text below as a natural lead-in to additional content."
     },
     {
       "id": 4,
-      "url": "",
-      "portada": "sampleCompany.png",
+      "url": "#",
+      "portada": "../../../assets/sampleCompany.png",
       "titulo": "Proyecto 4",
       "descripcion": "This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."
+    },
+    {
+      "url": "https://github.com/Jeremias0421/Sistema-Informatico-Biblioteca-UNER",
+      "portada": "https://editor.analyticsvidhya.com/uploads/66982lms.jpg",
+      "titulo": "Sistema de Gestion de Biblioteca UNER",
+      "descripcion": "Practico de la facultad para la materia Programacion Orientada a Objetos",
+      "id": 5
     }
   ],
   "experiences": [

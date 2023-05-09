@@ -7,3 +7,8 @@
 .card:hover{
     transform: scale(1.03);
 }
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+  }

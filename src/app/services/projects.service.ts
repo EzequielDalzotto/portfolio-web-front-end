@@ -30,4 +30,9 @@ export class ProjectsService {
   addProject(project: Project):Observable<Project>{
     return this.http.post<Project>(this.apiUrl, project, httpOptions)
   }
+
+  deleteProject(project:Project): Observable<Project>{
+    const url = `${this.apiUrl}/${project.id}`
+    return this.http.delete<Project>(url)
+  }
 }

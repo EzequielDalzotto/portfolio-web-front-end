@@ -4,13 +4,15 @@
       <!-- CARDS BOOTSTRAP -->
       <div class="row row-cols-1 row-cols-md-3 g-4 m-3">
         <div class="col" *ngFor="let project of projects">
-          <div class="card h-100">
-            <img src="../../../assets/{{project.portada}}" class="card-img-top" alt="{{project.titulo}}">
-            <div class="card-body">
-              <h5 class="card-title">{{project.titulo}}</h5>
-              <p class="card-text">{{project.descripcion}}</p>
+          <a href="{{project.url}}">
+            <div class="card h-100">
+              <img src="{{project.portada}}" class="card-img-top" alt="{{project.titulo}}">
+              <div class="card-body">
+                <h5 class="card-title">{{project.titulo}}</h5>
+                <p class="card-text">{{project.descripcion}}</p>
+              </div>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </div>

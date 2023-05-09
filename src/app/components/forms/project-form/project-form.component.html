@@ -1,0 +1,44 @@
+<div *ngIf="project;else nuevo">
+    <form [formGroup]="projectForm" (ngSubmit)="onSave()">
+        <div class="my-3">
+            <label for="url-proyecto" class="form-label">Enlace al proyecto</label>
+            <input formControlName="url" type="text" class="form-control" id="url-proyecto" [placeholder]="project.url">
+        </div>
+        <div class="my-3">
+            <label for="portada" class="form-label">Portada del Proyecto</label>
+            <input formControlName="portada" class="form-control" type="text" id="portada" [placeholder]="project.portada">
+        </div>
+        <div class="my-3">
+            <label for="tituloProyecto" class="form-label">Proyecto</label>
+            <input formControlName="titulo" type="text" class="form-control" id="tituloProyecto" [placeholder]="project.titulo">
+        </div>
+        <div class="my-3">
+            <label for="descripcion-proyecto" class="form-label">Descripcion</label>
+            <textarea formControlName="descripcion" class="form-control" id="descripcion-proyecto" rows="2" [placeholder]="project.descripcion"></textarea>
+        </div>
+        <button type="submit" [disabled]="projectForm.invalid" class="btn btn-primary btn-guardar">Guardar</button>
+        <button type="button" (click)="onDelete(project)" class="btn btn-primary btn-eliminar ms-2">Eliminar</button>
+    </form>
+</div>
+
+<ng-template #nuevo>
+    <form [formGroup]="projectForm" (ngSubmit)="onSave()">
+        <div class="my-3">
+            <label for="url-proyecto" class="form-label">Enlace al proyecto</label>
+            <input formControlName="url" type="text" class="form-control" id="url-proyecto" placeholder="Url al nuevo Proyecto">
+        </div>
+        <div class="my-3">
+            <label for="portada" class="form-label">Portada del Proyecto</label>
+            <input formControlName="portada" class="form-control" type="text" id="portada" placeholder="Portada del nuevo Proyecto">
+        </div>
+        <div class="my-3">
+            <label for="tituloProyecto" class="form-label">Proyecto</label>
+            <input formControlName="titulo" type="text" class="form-control" id="tituloProyecto" placeholder="Titulo del nuevo Proyecto">
+        </div>
+        <div class="my-3">
+            <label for="descripcion-proyecto" class="form-label">Descripcion</label>
+            <textarea formControlName="descripcion" class="form-control" id="descripcion-proyecto" rows="2" placeholder="Descripcion del nuevo Proyecto"></textarea>
+        </div>
+        <button type="submit" [disabled]="projectForm.invalid" class="btn btn-primary btn-guardar">Guardar</button>
+    </form>
+</ng-template>
