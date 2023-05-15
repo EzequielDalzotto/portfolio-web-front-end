@@ -10,8 +10,11 @@
             </li>
             <li class="list-group-item bg-custom">
                 <!-- Button trigger login -->
-                <button type="button" class="btn-sm btn-primary shadow-none btn-login" [routerLink]="'/login'">
+                <button *ngIf="!isLogged" type="button" class="btn-sm btn-primary shadow-none btn-login" (click)="login()">
                     Login
+                </button>
+                <button *ngIf="isLogged" type="button" class="btn-sm btn-primary shadow-none btn-login" (click)="onLogOut()">
+                    Logout
                 </button>
             </li>
         </ul>   

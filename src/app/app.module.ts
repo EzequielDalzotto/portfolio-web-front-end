@@ -32,6 +32,7 @@ import { EducationFormComponent } from './components/forms/education-form/educat
 import { ExperienceFormComponent } from './components/forms/experience-form/experience-form.component';
 import { ProjectFormComponent } from './components/forms/project-form/project-form.component';
 import { CertificateFormComponent } from './components/forms/certificate-form/certificate-form.component';
+import { interceptorProvider } from './services/interceptor.service';
 
 @NgModule({
   declarations: [
@@ -71,7 +72,7 @@ import { CertificateFormComponent } from './components/forms/certificate-form/ce
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [interceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
