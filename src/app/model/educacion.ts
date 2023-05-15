@@ -1,6 +1,6 @@
 export interface Educacion {
     id?: number;
-    tipo: string;
+    titulo: string;
     periodo: string;
     nombre: string;
     detalle: string;
