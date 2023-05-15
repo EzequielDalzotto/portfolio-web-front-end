@@ -13,26 +13,26 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class ProjectsService {
-  private apiUrl = 'http://localhost:5000/projects'
+  private apiUrl = 'http://localhost:8080/proyectos/'
 
 
   constructor(private http:HttpClient) { }
 
   getProjects():Observable<Project[]>{
-    return this.http.get<Project[]>(this.apiUrl)
+    return this.http.get<Project[]>(this.apiUrl + 'lista')
   }
 
   updateProject(project: Project):Observable<Project>{
-    const url = `${this.apiUrl}/${project.id}`
+    const url = `${this.apiUrl}update/${project.id}`
     return this.http.put<Project>(url, project, httpOptions)
   }
 
   addProject(project: Project):Observable<Project>{
-    return this.http.post<Project>(this.apiUrl, project, httpOptions)
+    return this.http.post<Project>(this.apiUrl + 'create', project, httpOptions)
   }
 
   deleteProject(project:Project): Observable<Project>{
-    const url = `${this.apiUrl}/${project.id}`
+    const url = `${this.apiUrl}delete/${project.id}`
     return this.http.delete<Project>(url)
   }
 }
