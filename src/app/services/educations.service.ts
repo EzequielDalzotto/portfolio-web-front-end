@@ -13,26 +13,26 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class EducationsService {
-  private apiUrl = 'http://localhost:5000/educaciones'
+  private apiUrl = 'http://localhost:8080/edu/'
 
 
   constructor(private http:HttpClient) { }
 
   getEducations():Observable<Educacion[]>{
-    return this.http.get<Educacion[]>(this.apiUrl)
+    return this.http.get<Educacion[]>(this.apiUrl + 'lista')
   }
 
   updateEducacion(educacion: Educacion):Observable<Educacion>{
-    const url = `${this.apiUrl}/${educacion.id}`
-    return this.http.put<Educacion>(url, educacion, httpOptions)
+    const url = `${this.apiUrl}update/${educacion.id}`
+    return this.http.put<Educacion>(url, educacion)
   }
 
   addEducacion(educacion: Educacion):Observable<Educacion>{
-    return this.http.post<Educacion>(this.apiUrl, educacion, httpOptions)
+    return this.http.post<Educacion>(this.apiUrl + 'create', educacion)
   }
 
   deleteEducacion(educacion:Educacion): Observable<Educacion>{
-    const url = `${this.apiUrl}/${educacion.id}`
+    const url = `${this.apiUrl}delete/${educacion.id}`
     return this.http.delete<Educacion>(url)
   }
 
