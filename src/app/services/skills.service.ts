@@ -13,45 +13,44 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class SkillsService {
-  private softApiUrl = 'http://localhost:5000/soft-skills'
-  private hardApiUrl = 'http://localhost:5000/hard-skills'
+  private hardApiUrl='http://localhost:8080/skillh/'
+  private softApiUrl='http://localhost:8080/skillso/'
 
   constructor(private http:HttpClient) { }
 
-  getSoftSkills():Observable<Skill[]>{
-    return this.http.get<Skill[]>(this.softApiUrl)
+  getHardSkills():Observable<Skill[]>{
+    return this.http.get<Skill[]>(this.hardApiUrl + 'lista')
   }
 
-  getHardSkills():Observable<Skill[]>{
-    return this.http.get<Skill[]>(this.hardApiUrl)
+  getSoftSkills():Observable<Skill[]>{
+    return this.http.get<Skill[]>(this.softApiUrl + 'lista')
   }
 
   updateSoftSkill(skill: Skill):Observable<Skill>{
-    const url = `${this.softApiUrl}/${skill.id}`
-    return this.http.put<Skill>(url, skill, httpOptions)
+    const url = `${this.softApiUrl}update/${skill.id}`
+    return this.http.put<Skill>(url, skill)
   }
 
   updateHardSkill(skill: Skill):Observable<Skill>{
-    const url = `${this.hardApiUrl}/${skill.id}`
-    return this.http.put<Skill>(url, skill, httpOptions)
+    const url = `${this.hardApiUrl}update/${skill.id}`
+    return this.http.put<Skill>(url, skill)
   }
 
   addSoftSkill(skill: Skill):Observable<Skill>{
-    return this.http.post<Skill>(this.softApiUrl, skill, httpOptions)
+    return this.http.post<Skill>(this.softApiUrl + 'create', skill)
   }
 
   addHardSkill(skill: Skill):Observable<Skill>{
-    return this.http.post<Skill>(this.hardApiUrl, skill, httpOptions)
+    return this.http.post<Skill>(this.hardApiUrl + 'create', skill)
   }
   
   deleteSoftSkill(skill:Skill): Observable<Skill>{
-    const url = `${this.softApiUrl}/${skill.id}`
+    const url = `${this.softApiUrl}delete/${skill.id}`
     return this.http.delete<Skill>(url)
   }
 
   deleteHardSkill(skill:Skill): Observable<Skill>{
-    const url = `${this.hardApiUrl}/${skill.id}`
+    const url = `${this.hardApiUrl}delete/${skill.id}`
     return this.http.delete<Skill>(url)
   }
-
 }

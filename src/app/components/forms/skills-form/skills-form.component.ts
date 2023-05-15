@@ -13,8 +13,8 @@ export class SkillsFormComponent {
   @Output() onDeleteSkill: EventEmitter<Skill> = new EventEmitter();
 
   skillForm: FormGroup;
-  name:string = "";
-  percentage:string = "";
+  nombre:string = "";
+  porcentaje:string = "";
 
   constructor(private formBuilder: FormBuilder) {
     this.skillForm = this.formBuilder.group({
@@ -25,15 +25,15 @@ export class SkillsFormComponent {
 
   onSave(){
     if(this.skill){
-      this.skill.name = this.skillForm.value.name
-      this.skill.percentage = this.skillForm.value.percentage
+      this.skill.nombre = this.skillForm.value.name
+      this.skill.porcentaje = this.skillForm.value.percentage
       this.onSaveSkill.emit(this.skill)
       this.skillForm.reset()
     }else{
-      this.name= this.skillForm.value.name
-      this.percentage= this.skillForm.value.percentage
-      const{name,percentage} = this
-      const newSkill = {name,percentage}
+      this.nombre= this.skillForm.value.name
+      this.porcentaje= this.skillForm.value.percentage
+      const{nombre,porcentaje} = this
+      const newSkill = {nombre,porcentaje}
       this.onSaveSkill.emit(newSkill)
       console.log(newSkill);
       
