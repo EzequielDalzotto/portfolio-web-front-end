@@ -1,6 +1,6 @@
 <div *ngIf="social_network; else nuevo">
     <form [formGroup]="socialForm" (ngSubmit)="onSave()">
-        <label for="socialUrl" class="form-label">{{social_network.media}}</label>
+        <label for="socialUrl" class="form-label">{{social_network.nombre}}</label>
         <input type="text" class="form-control" formControlName="socialUrl" id="socialUrl" [placeholder]="social_network.url">
         <button type="submit" [disabled]="socialForm.invalid" class="btn btn-primary btn-guardar">Guardar</button>
     </form>

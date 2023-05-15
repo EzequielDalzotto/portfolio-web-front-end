@@ -15,15 +15,15 @@ const httpOptions = {
 
 
 export class SocialMediaService {
-  private apiUrl = 'http://localhost:5000/social-media'
+  private apiUrl = 'http://localhost:8080/red/'
   constructor(private http:HttpClient) { }
 
   getSocial():Observable<SocialMedia[]>{
-    return this.http.get<SocialMedia[]>(this.apiUrl)
+    return this.http.get<SocialMedia[]>(this.apiUrl + 'lista')
   }
 
   updateSocial(socialMedia: SocialMedia):Observable<SocialMedia>{
-    const url = `${this.apiUrl}/${socialMedia.id}`
+    const url = `${this.apiUrl}update/${socialMedia.id}`
     return this.http.put<SocialMedia>(url, socialMedia, httpOptions)
   }
 }
