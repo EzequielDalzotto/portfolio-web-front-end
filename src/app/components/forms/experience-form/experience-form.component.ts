@@ -15,7 +15,7 @@ export class ExperienceFormComponent {
 
   experienceForm: FormGroup;
   img: string = "";
-  title: string = "";
+  titulo: string = "";
   descripcion: string = "";
 
   constructor(private formBuilder: FormBuilder) {
@@ -29,7 +29,7 @@ export class ExperienceFormComponent {
   onSave(){
     if(this.experience){
       this.experience.img = this.experienceForm.value.img
-      this.experience.title = this.experienceForm.value.titulo
+      this.experience.titulo = this.experienceForm.value.titulo
       this.experience.descripcion = this.experienceForm.value.descripcion
       this.onSaveExperience.emit(this.experience)
       console.log(this.experience);
@@ -37,10 +37,10 @@ export class ExperienceFormComponent {
       this.experienceForm.reset()
     }else{
       this.img= this.experienceForm.value.img
-      this.title= this.experienceForm.value.titulo
+      this.titulo= this.experienceForm.value.titulo
       this.descripcion= this.experienceForm.value.descripcion
-      const{img,title,descripcion} = this
-      const newExperience = {img,title,descripcion}
+      const{img,titulo,descripcion} = this
+      const newExperience = {img,titulo,descripcion}
       this.onSaveExperience.emit(newExperience)
       console.log(newExperience);
       this.experienceForm.reset()

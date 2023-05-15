@@ -1,6 +1,6 @@
 export interface Experience {
     id?:number;
     img:string;
-    title:string;
+    titulo:string;
     descripcion:string;
 }

@@ -40,7 +40,7 @@ export class ExperiencePanelComponent implements OnInit {
     this.experiencesService.deleteExperience(experience).subscribe(()=>[
       this.experiences = this.experiences.filter( (e) => e.id !== experience.id)
     ])
-    alert(experience.title + ": Removida")
+    alert(experience.titulo + ": Removida")
   }
 
 }
