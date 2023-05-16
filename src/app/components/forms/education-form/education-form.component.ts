@@ -14,7 +14,7 @@ export class EducationFormComponent {
 
   educationForm: FormGroup;
   titulo: string = "";
-  periodo: string = "";
+  periodoe: string = "";
   nombre: string = "";
   detalle: string = "";
 
@@ -30,7 +30,7 @@ export class EducationFormComponent {
   onSave(){
     if(this.education){
       this.education.titulo = this.educationForm.value.tipo
-      this.education.periodo = this.educationForm.value.periodo
+      this.education.periodoe = this.educationForm.value.periodo
       this.education.nombre = this.educationForm.value.nombre
       this.education.detalle = this.educationForm.value.detalle
       this.onSaveEducation.emit(this.education)
@@ -39,11 +39,11 @@ export class EducationFormComponent {
       this.educationForm.reset()
     }else{
       this.titulo= this.educationForm.value.tipo
-      this.periodo= this.educationForm.value.periodo
+      this.periodoe= this.educationForm.value.periodo
       this.nombre= this.educationForm.value.nombre
       this.detalle= this.educationForm.value.detalle
-      const{titulo,periodo,nombre,detalle} = this
-      const neweducation = {titulo,periodo,nombre,detalle}
+      const{titulo,periodoe,nombre,detalle} = this
+      const neweducation = {titulo,periodoe,nombre,detalle}
       this.onSaveEducation.emit(neweducation)
       console.log(neweducation);
       this.educationForm.reset()
