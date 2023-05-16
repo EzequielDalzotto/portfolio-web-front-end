@@ -12,8 +12,8 @@ export class AdminDashboardComponent implements OnInit {
   constructor(private aboutMeService: AboutMeService) {  }
 
   ngOnInit(): void {
-      this.aboutMeService.getAboutMe().subscribe((about_me)=>[
-        this.about_me = about_me
+      this.aboutMeService.getAboutme().subscribe((about_me)=>[
+        this.about_me = about_me[0]
       ])
   }
 }

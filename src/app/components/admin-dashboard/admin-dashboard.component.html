@@ -4,7 +4,7 @@
         <div class="row">
           <div class="col-3 text-center mb-2">
             <!-- Informacion -->
-            <img src="{{about_me.ft_perfil}}" alt="foto de perfil" class="rounded-circle img-fluid img-thumbnail ft-perfil">
+            <img src="{{about_me.foto}}" alt="foto de perfil" class="rounded-circle img-fluid img-thumbnail ft-perfil">
             <h4>Ezequiel Dalzotto</h4>
             <p>{{about_me.titulo}}</p>
             <!-- List group --Lista de Paneles-- -->
@@ -12,10 +12,6 @@
                 <a class="list-group-item list-group-item-action active" data-bs-toggle="list" href="#redes" role="tab">
                     <img src="../../../assets/icons8-social-64.png" alt="Redes" class="panel-logo">
                     Redes Sociales
-                </a>
-                <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#banner" role="tab">
-                    <img src="../../../assets/icons8-picture-64.png" alt="Banner" class="panel-logo">
-                    Banner
                 </a>
                 <a class="list-group-item list-group-item-action" data-bs-toggle="list" href="#about-me" role="tab">
                     <img src="../../../assets/icons8-about-me-50.png" alt="About me" class="panel-logo">
@@ -44,9 +40,6 @@
             <div class="tab-content">
                 <div class="tab-pane active" id="redes" role="tabpanel">
                     <app-social-media-panel></app-social-media-panel>
-                </div>
-                <div class="tab-pane" id="banner" role="tabpanel">
-                    <app-banner-panel></app-banner-panel>
                 </div>
                 <div class="tab-pane" id="about-me" role="tabpanel">
                     <app-about-me-panel></app-about-me-panel>

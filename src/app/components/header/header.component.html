@@ -8,6 +8,12 @@
                     <img src="../../../assets/{{social_network.icon}}" alt="{{social_network.nombre}}" class="logo">
                 </a>
             </li>
+            <li *ngIf="isLogged" class="list-group-item bg-custom">
+                <a routerLink="/admin-dashboard">
+                    <img src="../../../assets/icons8-edit-64.png" alt="panel" class="logo">
+                </a>
+            </li>
+            
             <li class="list-group-item bg-custom">
                 <!-- Button trigger login -->
                 <button *ngIf="!isLogged" type="button" class="btn-sm btn-primary shadow-none btn-login" (click)="login()">

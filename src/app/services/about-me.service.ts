@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { AboutMe } from '../model/about-me';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -13,16 +14,16 @@ const httpOptions = {
 })
 export class AboutMeService {
 
-  private apiUrl = 'http://localhost:5000/about-me'
+  private apiUrl = 'http://localhost:8080/aboutme/'
 
   constructor(private http:HttpClient) { }
 
-  getAboutMe():Observable<any>{
-    return this.http.get(this.apiUrl)
+  getAboutme():Observable<AboutMe[]>{
+    return this.http.get<AboutMe[]>(this.apiUrl + 'lista')
   }
 
-  updateAbout(about_me: any):Observable<any>{
-    const url = this.apiUrl
-    return this.http.put<any>(url, about_me, httpOptions)
+  updateAbout(about_me: AboutMe):Observable<AboutMe>{
+    const url = `${this.apiUrl}update/${about_me.id}`
+    return this.http.put<AboutMe>(url, about_me)
   }
 }

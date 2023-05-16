@@ -1,7 +1,15 @@
 <form [formGroup]="aboutForm" (ngSubmit)="onSave()">
     <div class="my-3">
         <label for="ftPerfil" class="form-label">Foto de Perfil</label>
-        <input class="form-control" formControlName="ftPerfil" [ngClass]="{'noChanges' : ftPerfil?.hasError('required')}" type="text" id="ftPerfil" [placeholder]="about_me.ft_perfil">
+        <input class="form-control" formControlName="ftPerfil" [ngClass]="{'noChanges' : ftPerfil?.hasError('required')}" type="text" id="ftPerfil" [placeholder]="about_me.foto">
+    </div>
+    <div class="my-3">
+        <label for="banner" class="form-label">Banner</label>
+        <input class="form-control" formControlName="banner" [ngClass]="{'noChanges' : banner?.hasError('required')}" type="text" id="ftPerfil" [placeholder]="about_me.banner">
+    </div>
+    <div class="my-3">
+        <label for="nombre" class="form-label">Nombre y Apellido</label>
+        <input class="form-control" formControlName="nombre" [ngClass]="{'noChanges' : nombre?.hasError('required')}" type="text" id="ftPerfil" [placeholder]="about_me.nombre">
     </div>
     <div class="my-3">
         <label for="tituloActual" class="form-label">Titulo</label>
