@@ -13,7 +13,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ExperiencesService {
-  private apiUrl = 'http://localhost:8080/exps/'
+  private apiUrl = 'https://portfoliobackendezd.onrender.com/exps/'
 
   constructor(private http:HttpClient) { }
 

@@ -15,7 +15,7 @@ const httpOptions = {
 
 
 export class SocialMediaService {
-  private apiUrl = 'http://localhost:8080/red/'
+  private apiUrl = 'https://portfoliobackendezd.onrender.com/red/'
   constructor(private http:HttpClient) { }
 
   getSocial():Observable<SocialMedia[]>{

@@ -12,7 +12,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class BannerService {
-  private apiUrl = 'http://localhost:5000/banner'
+  private apiUrl = 'https://portfoliobackendezd.onrender.com/banner'
 
   constructor(private http:HttpClient) { }
 
