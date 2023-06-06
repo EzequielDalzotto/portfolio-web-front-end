@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Experience } from '../model/experience';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 // const httpOptions = {
 //   headers: new HttpHeaders({
@@ -13,7 +14,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ExperiencesService {
-  private apiUrl = 'https://portfoliobackendezd.onrender.com/exps/'
+  private apiUrl = environment.apiUrl + 'exps/'
 
   constructor(private http:HttpClient) { }
 

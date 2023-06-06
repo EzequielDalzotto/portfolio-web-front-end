@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Educacion } from '../model/educacion';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -13,7 +14,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class EducationsService {
-  private apiUrl = 'https://portfoliobackendezd.onrender.com/edu/'
+  private apiUrl = environment.apiUrl + 'edu/'
 
 
   constructor(private http:HttpClient) { }

@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Project } from '../model/project';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -13,7 +14,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class ProjectsService {
-  private apiUrl = 'https://portfoliobackendezd.onrender.com/proyectos/'
+  private apiUrl = environment.apiUrl + 'proyectos/'
 
 
   constructor(private http:HttpClient) { }

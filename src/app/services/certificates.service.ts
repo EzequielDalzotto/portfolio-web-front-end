@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Certificate } from '../model/certificate';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -13,7 +14,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class CertificatesService {
-  private apiUrl = 'https://portfoliobackendezd.onrender.com/certs/'
+  private apiUrl = environment.apiUrl + 'certs/'
 
   constructor(private http:HttpClient) { }
 

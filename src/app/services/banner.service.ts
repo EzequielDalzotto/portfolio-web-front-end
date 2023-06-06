@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -12,7 +13,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class BannerService {
-  private apiUrl = 'https://portfoliobackendezd.onrender.com/banner'
+  private apiUrl = environment.apiUrl + 'banner'
 
   constructor(private http:HttpClient) { }
 

@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { SocialMedia } from '../model/social-media';
+import { environment } from 'src/environments/environment';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -15,7 +16,7 @@ const httpOptions = {
 
 
 export class SocialMediaService {
-  private apiUrl = 'https://portfoliobackendezd.onrender.com/red/'
+  private apiUrl = environment.apiUrl + 'red/'
   constructor(private http:HttpClient) { }
 
   getSocial():Observable<SocialMedia[]>{

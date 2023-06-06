@@ -1,6 +1,6 @@
 <section class="educacion">
     <div class="container-fluid ms-0 m-0">
-      <h3 class="titulo-seccion educacion__titulo-seccion text-end mt-4 mb-4">Educacion</h3>
+      <h3 class="titulo-seccion educacion__titulo-seccion text-center mt-3 mb-4">Educacion</h3>
       <!--Grid que contiene grid de educaciones y certificados-->
       <div class="educacion__maingrid-container"> 
         <div class="row">
@@ -10,7 +10,7 @@
               <div class="row" *ngFor="let educacion of educations">
                 <div class=" col-4 text-left mt-3">
                   <h4 class="educacion-titulo">{{educacion.titulo}}</h4>
-                  <h6 class="años-de-estudio">{{educacion.periodoe}}</h6>
+                  <h6 class="años-de-estudio">{{educacion.periodo}}</h6>
                 </div>
                 <div class="col-8 text-center mt-3">
                   <h5>{{educacion.nombre}}</h5>
@@ -22,7 +22,7 @@
             </div>
           </div>
           <!--Columna de certificados-->
-          <div class="col-5 text-center">
+          <div class="col-5 text-center mt-3">
             <!-- Carrousel de certificados -->
             <app-certificates></app-certificates>
           </div>

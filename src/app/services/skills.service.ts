@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Skill } from '../model/skill';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -13,8 +14,8 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class SkillsService {
-  private hardApiUrl='https://portfoliobackendezd.onrender.com/skillh/'
-  private softApiUrl='https://portfoliobackendezd.onrender.com/skillso/'
+  private hardApiUrl= environment.apiUrl + 'skillh/'
+  private softApiUrl= environment.apiUrl + 'skillso/'
 
   constructor(private http:HttpClient) { }
 

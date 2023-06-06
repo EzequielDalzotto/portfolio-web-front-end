@@ -20,6 +20,12 @@
     height: 40px;
 }
 
+.logo2{
+    width: 31px;
+    height: 31px;
+    margin-top: 3px;
+}
+
 .logo:hover{
     opacity: 50%;
 }
